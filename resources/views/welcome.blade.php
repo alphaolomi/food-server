@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{config('app.name')}} | welcome</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -36,8 +36,8 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                /*right: 500px;*/
+                top: 400px;
             }
 
             .content {
@@ -51,7 +51,7 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 23px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -81,15 +81,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Infyom CoreUI template
+                   Food App 🍜🍚
                 </div>
 
                 <div class="links">
-                    <a href="http://labs.infyom.com/laravelgenerato">Infyom Labs Docs</a>
-                    <a href="https://laravel.com/docs">Laravel Docs</a>
-                    <a href="https://coreui.io/docs/getting-started/introduction">CoreUI Docs</a>
-                    <a href="https://github.com/laravel/laravel">Laravel GitHub</a>
-                    <a href="https://github.com/InfyOmLabs/laravel-generator">Infyom Labs GitHub</a>
+                    <a href="http://labs.infyom.com/laravelgenerato">Play store</a>
+                    <a href="https://laravel.com/docs">Docs</a>
+
                 </div>
             </div>
         </div>
