@@ -3,10 +3,9 @@
 
 
 <p align="center">
+  <a href="https://travis-ci.com/alphaolomi/foodapp-backend"><img src="https://img.shields.io/travis/com/alphaolomi/foodapp-backend?style=flat-square" alt="Maintained:yes"></a>  
   <a href="/"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" alt="Maintained:yes"></a>
-  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
-  
-  
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>  
 </p>
 
 ## Progress
