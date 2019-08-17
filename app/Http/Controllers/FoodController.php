@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateFoodRequest;
 use App\Http\Requests\UpdateFoodRequest;
 use App\Repositories\FoodRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
-use Response;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class FoodController extends AppBaseController
 {
@@ -133,9 +132,9 @@ class FoodController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {

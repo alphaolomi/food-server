@@ -25,7 +25,7 @@ class Food extends Model
     use SoftDeletes;
 
     public $table = 'foods';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -77,5 +77,5 @@ class Food extends Model
         'showHome' => 'required'
     ];
 
-    
+
 }

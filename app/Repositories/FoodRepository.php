@@ -3,14 +3,12 @@
 namespace App\Repositories;
 
 use App\Models\Food;
-use App\Repositories\BaseRepository;
 
 /**
  * Class FoodRepository
  * @package App\Repositories
  * @version August 9, 2019, 7:53 pm UTC
-*/
-
+ */
 class FoodRepository extends BaseRepository
 {
     /**

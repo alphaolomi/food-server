@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\CreateUserAPIRequest;
 use App\Http\Requests\API\UpdateUserAPIRequest;
-use App\Models\User;
 use App\Repositories\UserRepository;
+use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
-use Response;
+use Illuminate\Http\Response;
 
 /**
  * Class UserController
  * @package App\Http\Controllers\API
  */
-
 class UserAPIController extends AppBaseController
 {
     /** @var  UserRepository */
@@ -111,9 +110,9 @@ class UserAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {
