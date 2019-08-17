@@ -21,3 +21,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('foods', 'FoodController');
+
+Route::resource('users', 'UserController');
