@@ -3,7 +3,6 @@
         <thead>
             <th>Fullname</th>
         <th>Username</th>
-        <th>Password</th>
         <th>Email</th>
         <th>Position</th>
         <th>Phoneno</th>
@@ -13,9 +12,8 @@
         <tbody>
         @foreach($users as $user)
             <tr>
-                <td>{!! $user->fullName !!}</td>
+                <td>{!! $user->name !!}</td>
             <td>{!! $user->username !!}</td>
-            <td>{!! $user->password !!}</td>
             <td>{!! $user->email !!}</td>
             <td>{!! $user->position !!}</td>
             <td>{!! $user->phoneNo !!}</td>
