@@ -10,7 +10,7 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "4.2.0",
-        "laravel/framework": "5.8.31",
+        "laravel/framework": "5.8.34",
         "laravel/tinker": "1.0.9",
         "appointer/swaggervel": "dev-master",
         "barryvdh/laravel-ide-helper": "2.6.2",
