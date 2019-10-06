@@ -18,7 +18,7 @@
         "infyomlabs/coreui-templates": "5.8.*",
         "infyomlabs/laravel-generator": "5.8.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
-        "laravelcollective/html": "6.0.2"
+        "laravelcollective/html": "6.0.3"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "1.3.0",
