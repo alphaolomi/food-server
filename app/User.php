@@ -34,14 +34,13 @@ class User extends Authenticatable
 
 
     public $fillable = [
-        'fullName',
+        'name',
         'username',
-        'password',
-        'email',
         'position',
         'phoneNo',
         'address',
-        'name', 'email', 'password',
+        'email',
+        'password',
 
     ];
 
@@ -52,7 +51,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'id' => 'integer',
-        'fullName' => 'string',
         'username' => 'string',
         'password' => 'string',
         'email' => 'string',
@@ -68,13 +66,8 @@ class User extends Authenticatable
      * @var array
      */
     public static $rules = [
-        'fullName' => 'reqiored',
-        'username' => 'required',
         'password' => 'required',
-        'email' => 'position string text',
-        'position' => 'required',
-        'phoneNo' => 'required',
-        'address' => 'required'
+        'email' => 'required',
     ];
 
     /**
@@ -85,6 +78,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-
 }
