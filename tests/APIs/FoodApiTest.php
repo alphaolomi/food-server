@@ -1,4 +1,6 @@
-<?php namespace Tests\APIs;
+<?php
+
+namespace Tests\APIs;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -16,7 +18,7 @@ class FoodApiTest extends TestCase
     public function test_create_food()
     {
         $food = $this->fakeFoodData();
-        $this->response = $this->json('POST', '/api/foods', $food);
+        $this->response = $this->json('POST', '/api/v1/foods', $food);
 
         $this->assertApiResponse($food);
     }
@@ -27,7 +29,7 @@ class FoodApiTest extends TestCase
     public function test_read_food()
     {
         $food = $this->makeFood();
-        $this->response = $this->json('GET', '/api/foods/'.$food->id);
+        $this->response = $this->json('GET', '/api/v1/foods/' . $food->id);
 
         $this->assertApiResponse($food->toArray());
     }
@@ -40,7 +42,7 @@ class FoodApiTest extends TestCase
         $food = $this->makeFood();
         $editedFood = $this->fakeFoodData();
 
-        $this->response = $this->json('PUT', '/api/foods/'.$food->id, $editedFood);
+        $this->response = $this->json('PUT', '/api/v1/foods/' . $food->id, $editedFood);
 
         $this->assertApiResponse($editedFood);
     }
@@ -51,10 +53,10 @@ class FoodApiTest extends TestCase
     public function test_delete_food()
     {
         $food = $this->makeFood();
-        $this->response = $this->json('DELETE', '/api/foods/'.$food->id);
+        $this->response = $this->json('DELETE', '/api/v1/foods/' . $food->id);
 
         $this->assertApiSuccess();
-        $this->response = $this->json('GET', '/api/foods/'.$food->id);
+        $this->response = $this->json('GET', '/api/v1/foods/' . $food->id);
 
         $this->response->assertStatus(404);
     }

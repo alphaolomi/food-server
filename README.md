@@ -1,63 +1,96 @@
-<h1 align="center">Food App Backend Server 🍚🍝</h1>
-<p align="center">A backend for simple 🍉food delivery,application based on Flutter. Made with ❤️ in Tanzania. For university students at UDSM</p>
+# FoodApp Engine [![Software License][ico-license]](LICENSE) [![Build Status][ico-travis]][link-travis] [![PRs Welcome][ico-pr]][link-pr] [Maintained:yes][ico-maintained]
 
+An backend server for simple food delivery, application based on Flutter.
 
-<p align="center">
-  <a href="https://travis-ci.com/alphaolomi/foodapp-backend"><img src="https://img.shields.io/travis/com/alphaolomi/foodapp-backend?style=flat-square" alt="Maintained:yes"></a>  
-  <a href="/"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" alt="Maintained:yes"></a>
-  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>  
-</p>
+### ✨Features
 
-## Progress & Status
+-   Laravel 6.0
+-   Json web token Auth
+-   REST Api
 
-Food App version v.0.0.1 is In development  right now, Check out a demo at [http://foodapp-beta.herokuapp.com](http://foodapp-beta.herokuapp.com)
+## 🚀Getting started
 
+Composer and Yarn/NPM are required
 
-## Overview
+#### Installation
 
-### API Oulet
-FoodApp uses REST API
-#### Using CURL 
-Send a request 
+Via Git
+
+-   Fork, Clone fork
 
 ```bash
-curl http://foodapp-beta.herokuapp.com/api/foods
+git clone https://github.com/alphaolomi/foodapp-backend.git
+
+cd foodapp-backend
+
+composer install --no-interaction
+yarn install
 ```
-#### Output
+
+-   Edit `.env` and set your database connection details
+
+```bash
+cp .env.example .env
+```
+
+-   Genrate keys and migrate tables
+
+```bash
+php artisan key:generate
+php artisan migrate
+```
+
+## Development
+
+#### API Response Schema
+
 ```json
 {
-  "success":true,
-  "data":[
-    {
-      "id":1,"image":"fd80ecec48eba2a9adb76e4133905879.png",
-      "title":"Chicken Soup",
-      "subTitle":"A very cool suop in town",
-      "thumbnail":"a.jpg",
-      "price":2500,
-      "comments":2,"rating":4,"description":"A very long bio",
-      "showHome":true,
-      "created_at":"2019-08-10 10:45:15",
-      "updated_at":"2019-08-10 10:45:15",
-      "deleted_at":null
-      }
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "image": "fd80ecec48eba2a9adb76e4133905879.png",
+            "title": "Chicken Soup",
+            "subTitle": "A very cool suop in town",
+            "thumbnail": "a.jpg",
+            "price": 2500,
+            "comments": 2,
+            "rating": 4,
+            "description": "A very long bio",
+            "showHome": true,
+            "created_at": "2019-08-10 10:45:15",
+            "updated_at": "2019-08-10 10:45:15",
+            "deleted_at": null
+        }
     ],
-  "message":"Foods retrieved successfully"
+    "message": "Foods retrieved successfully"
 }
 ```
 
-## 🤓 Author(s)
+## Contributing
 
-- **Alpha Olomi** [hello@alphaolomi.com](mailto:hello@alphaolomi.com)
-- **Gordon Nchy** [@gordonnchy](https://github.com/gordonnchy)
+Pull requests are welcome. Please see [CONTRIBUTING](./.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](./.github/CODE_OF_CONDUCT.md) for details.
 
+## Security
 
-## ☕️  Donate
+If you discover any security related issues, please email [hello@alphaolomi.com](mailto:hello@alphaolomi.com) instead of using the issue tracker.
 
-Buy me a cup of Coffee😁
+## Credits
 
+-   [@gordonnchy](https://github.com/gordonnchy/) **Gordon Nchy**
+-   [@alphaolomi](https://github.com/alphaolomi/) **Alpha Olomi**
+-   [All Contributors][link-contributors]
 
-> Wallet coming soon 🚧
+## License
 
+The Apache 2 License. Please see [License File](LICENSE) for more information.
 
-## 🔖 LICENCE
-[Apache](http://www.wtfpl.net/about/) License
+[ico-license]: https://img.shields.io/badge/license-BSD_2_Clause-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/com/alphaolomi/foodapp-backend?style=flat-square
+[link-travis]: https://travis-ci.com/alphaolomi/foodapp-backend
+[link-repo]: https://github.com/gordonnchy/dotify-server
+[link-contributors]: ../../contributors
+[ico-maintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square
+[link-pr]: http://makeapullrequest.com
+[ico-pr]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square

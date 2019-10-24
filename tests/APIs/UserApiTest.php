@@ -1,4 +1,6 @@
-<?php namespace Tests\APIs;
+<?php
+
+namespace Tests\APIs;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -16,7 +18,7 @@ class UserApiTest extends TestCase
     public function test_create_user()
     {
         $user = $this->fakeUserData();
-        $this->response = $this->json('POST', '/api/users', $user);
+        $this->response = $this->json('POST', '/api/v1/users', $user);
 
         $this->assertApiResponse($user);
     }
@@ -27,7 +29,7 @@ class UserApiTest extends TestCase
     public function test_read_user()
     {
         $user = $this->makeUser();
-        $this->response = $this->json('GET', '/api/users/'.$user->id);
+        $this->response = $this->json('GET', '/api/v1/users/' . $user->id);
 
         $this->assertApiResponse($user->toArray());
     }
@@ -40,7 +42,7 @@ class UserApiTest extends TestCase
         $user = $this->makeUser();
         $editedUser = $this->fakeUserData();
 
-        $this->response = $this->json('PUT', '/api/users/'.$user->id, $editedUser);
+        $this->response = $this->json('PUT', '/api/v1/users/' . $user->id, $editedUser);
 
         $this->assertApiResponse($editedUser);
     }
@@ -51,10 +53,10 @@ class UserApiTest extends TestCase
     public function test_delete_user()
     {
         $user = $this->makeUser();
-        $this->response = $this->json('DELETE', '/api/users/'.$user->id);
+        $this->response = $this->json('DELETE', '/api/v1/users/' . $user->id);
 
         $this->assertApiSuccess();
-        $this->response = $this->json('GET', '/api/users/'.$user->id);
+        $this->response = $this->json('GET', '/api/v1/users/' . $user->id);
 
         $this->response->assertStatus(404);
     }
