@@ -1,12 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "alphao/foodengine",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A cool food app.",
     "keywords": [
-        "framework",
-        "laravel"
+        "foods"
     ],
-    "license": "MIT",
+    "license": "Apache License",
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "4.2.1",
