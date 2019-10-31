@@ -1,4 +1,4 @@
-# FoodApp Engine [![Software License][ico-license]](LICENSE) [![Build Status][ico-travis]][link-travis] [![PRs Welcome][ico-pr]][link-pr] [Maintained:yes][ico-maintained]
+# FoodApp Engine [![Software License][ico-license]](LICENSE) [![Build Status][ico-travis]][link-travis] [![PRs Welcome][ico-pr]][link-pr] ![Maintained:yes][ico-maintained]
 
 An backend server for simple food delivery, application based on Flutter.
 
@@ -86,7 +86,7 @@ If you discover any security related issues, please email [hello@alphaolomi.com]
 
 The Apache 2 License. Please see [License File](LICENSE) for more information.
 
-[ico-license]: https://img.shields.io/badge/license-BSD_2_Clause-brightgreen.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-BSD_2_Clause-green.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/com/alphaolomi/foodapp-backend?style=flat-square
 [link-travis]: https://travis-ci.com/alphaolomi/foodapp-backend
 [link-repo]: https://github.com/gordonnchy/dotify-server
