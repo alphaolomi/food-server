@@ -167,10 +167,10 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        // Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        // \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        \InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,
+        // \InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,
 
         /*
          * Application Service Providers...
