@@ -24,3 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('profile/setting', 'ProfileController@edit')->name('profile.setting');
+
+
+Route::resource('foods', 'FoodController');
