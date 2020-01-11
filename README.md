@@ -87,8 +87,8 @@ If you discover any security related issues, please email [hello@alphaolomi.com]
 The Apache 2 License. Please see [License File](LICENSE) for more information.
 
 [ico-license]: https://img.shields.io/badge/license-BSD_2_Clause-green.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/com/alphaolomi/foodapp-backend?style=flat-square
-[link-travis]: https://travis-ci.com/alphaolomi/foodapp-backend
+[ico-travis]: https://img.shields.io/travis/com/alphaolomi/food-server?style=flat-square
+[link-travis]: https://travis-ci.com/alphaolomi/food-server
 [link-repo]: https://github.com/gordonnchy/dotify-server
 [link-contributors]: ../../contributors
 [ico-maintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square
