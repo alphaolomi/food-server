@@ -5,10 +5,11 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use Tests\ApiTestTrait;
 use App\Models\Food;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class FoodApiTest extends TestCase
 {
-    use ApiTestTrait, WithoutMiddleware, DatabaseTransactions;
+    use ApiTestTrait, WithoutMiddleware,RefreshDatabase;
 
     /**
      * @test

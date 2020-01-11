@@ -3,12 +3,13 @@
 use App\Models\Food;
 use App\Repositories\FoodRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use Tests\ApiTestTrait;
 
 class FoodRepositoryTest extends TestCase
 {
-    use ApiTestTrait, DatabaseTransactions;
+    use ApiTestTrait,RefreshDatabase;
 
     /**
      * @var FoodRepository
