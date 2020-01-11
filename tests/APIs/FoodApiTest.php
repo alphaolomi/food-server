@@ -9,7 +9,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class FoodApiTest extends TestCase
 {
-    use ApiTestTrait, WithoutMiddleware,RefreshDatabase;
+    use RefreshDatabase;
+    use ApiTestTrait;
+//    use WithoutMiddleware;
+
 
     /**
      * @test
@@ -35,9 +38,9 @@ class FoodApiTest extends TestCase
 
         $this->response = $this->json(
             'GET',
-            '/api/foods/'.$food->id
+            'api/foods/'.$food->id
         );
-
+dd($this->response->content());
         $this->assertApiResponse($food->toArray());
     }
 

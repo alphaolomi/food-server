@@ -44,9 +44,10 @@ class FoodRepositoryTest extends TestCase
     public function test_read_food()
     {
         $food = factory(Food::class)->create();
-
+        $this->assertDatabaseHas('foods',$food->toArray());
+dd($food);
         $dbFood = $this->foodRepo->find($food->id);
-
+        dd($dbFood);
         $dbFood = $dbFood->toArray();
         $this->assertModelData($food->toArray(), $dbFood);
     }

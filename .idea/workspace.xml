@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7efb367-67a4-49fe-b8ca-4f9f2c8d2063" name="Default Changelist" comment="" />
+    <list default="true" id="d7efb367-67a4-49fe-b8ca-4f9f2c8d2063" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/serve.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/APIs/FoodApiTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/APIs/FoodApiTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ApiTestTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ApiTestTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Repositories/FoodRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Repositories/FoodRepositoryTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,21 +149,48 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/artisan" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="PHPUnit.FoodRepositoryTest.test_create_food">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="FoodApiTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\APIs\FoodApiTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/APIs/FoodApiTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodApiTest.test_create_food" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\APIs\FoodApiTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/APIs/FoodApiTest.php" method="test_create_food" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodApiTest.test_read_food" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\APIs\FoodApiTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/APIs/FoodApiTest.php" method="test_read_food" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="FoodRepositoryTest.test_create_food" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Repositories\FoodRepositoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Repositories/FoodRepositoryTest.php" method="test_create_food" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="FoodRepositoryTest.test_read_food" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Repositories\FoodRepositoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Repositories/FoodRepositoryTest.php" method="test_read_food" scope="Method" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="npm.watch" />
+      <item itemvalue="PHP Script.serve" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.FoodRepositoryTest.test_create_food" />
+      <item itemvalue="PHPUnit.FoodApiTest.test_read_food" />
+      <item itemvalue="PHPUnit.FoodApiTest" />
+      <item itemvalue="PHPUnit.FoodApiTest.test_create_food" />
+      <item itemvalue="PHPUnit.FoodRepositoryTest.test_read_food" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.FoodRepositoryTest.test_read_food" />
+        <item itemvalue="PHPUnit.FoodApiTest.test_read_food" />
+        <item itemvalue="PHPUnit.FoodApiTest" />
+        <item itemvalue="PHPUnit.FoodApiTest.test_create_food" />
         <item itemvalue="PHPUnit.FoodRepositoryTest.test_create_food" />
       </list>
     </recent_temporary>
@@ -182,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578705447299</updated>
-      <workItem from="1578705449198" duration="156000" />
+      <workItem from="1578705449198" duration="1710000" />
     </task>
     <servers />
   </component>
@@ -198,25 +233,33 @@
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
     <state x="648" y="132" width="614" height="812" key="#PHP/1.25.1919.1031@1.25.1919.1031" timestamp="1578705547181" />
-    <state x="418" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578705604360">
+    <state x="418" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578706299585">
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
-    <state x="418" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/1.25.1919.1031@1.25.1919.1031" timestamp="1578705604360" />
-    <state width="1919" height="576" key="GridCell.Tab.0.bottom" timestamp="1578705704873">
+    <state x="418" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/1.25.1919.1031@1.25.1919.1031" timestamp="1578706299585" />
+    <state x="743" y="296" width="424" height="483" key="FileChooserDialogImpl" timestamp="1578706280069">
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
-    <state width="1919" height="576" key="GridCell.Tab.0.bottom/1.25.1919.1031@1.25.1919.1031" timestamp="1578705704873" />
-    <state width="1919" height="576" key="GridCell.Tab.0.center" timestamp="1578705704872">
+    <state x="743" y="296" width="424" height="483" key="FileChooserDialogImpl/1.25.1919.1031@1.25.1919.1031" timestamp="1578706280069" />
+    <state width="1919" height="569" key="GridCell.Tab.0.bottom" timestamp="1578707153900">
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
-    <state width="1919" height="576" key="GridCell.Tab.0.center/1.25.1919.1031@1.25.1919.1031" timestamp="1578705704872" />
-    <state width="1919" height="576" key="GridCell.Tab.0.left" timestamp="1578705704872">
+    <state width="1919" height="569" key="GridCell.Tab.0.bottom/1.25.1919.1031@1.25.1919.1031" timestamp="1578707153900" />
+    <state width="1919" height="569" key="GridCell.Tab.0.center" timestamp="1578707153900">
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
-    <state width="1919" height="576" key="GridCell.Tab.0.left/1.25.1919.1031@1.25.1919.1031" timestamp="1578705704872" />
-    <state width="1919" height="576" key="GridCell.Tab.0.right" timestamp="1578705704872">
+    <state width="1919" height="569" key="GridCell.Tab.0.center/1.25.1919.1031@1.25.1919.1031" timestamp="1578707153900" />
+    <state width="1919" height="569" key="GridCell.Tab.0.left" timestamp="1578707153899">
       <screen x="1" y="25" width="1919" height="1031" />
     </state>
-    <state width="1919" height="576" key="GridCell.Tab.0.right/1.25.1919.1031@1.25.1919.1031" timestamp="1578705704872" />
+    <state width="1919" height="569" key="GridCell.Tab.0.left/1.25.1919.1031@1.25.1919.1031" timestamp="1578707153899" />
+    <state width="1919" height="569" key="GridCell.Tab.0.right" timestamp="1578707153900">
+      <screen x="1" y="25" width="1919" height="1031" />
+    </state>
+    <state width="1919" height="569" key="GridCell.Tab.0.right/1.25.1919.1031@1.25.1919.1031" timestamp="1578707153900" />
+    <state x="623" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1578706063136">
+      <screen x="1" y="25" width="1919" height="1031" />
+    </state>
+    <state x="623" y="248" width="672" height="678" key="search.everywhere.popup/1.25.1919.1031@1.25.1919.1031" timestamp="1578706063136" />
   </component>
 </project>
