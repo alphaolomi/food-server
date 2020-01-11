@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('title', 'Edit food')
 @section('content')
 
 <div class="">

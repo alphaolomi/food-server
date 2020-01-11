@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', 'Create')
+
 @section('content')
 
 <div class="">

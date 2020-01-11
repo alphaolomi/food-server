@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('title', 'Foods List')
 @section('content')
 
 <div class="">
@@ -12,10 +12,10 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i>
-                        Foods
-                        <a class="pull-right" href="{{ route('foods.create') }}"><i
-                                class="fa fa-plus-square fa-lg"></i></a>
+                        <h4><i class="fa fa-align-justify"></i>
+                            Foods
+                            <a class="btn btn-sm btn-primary" href="{{ route('foods.create') }}"><i
+                                    class="fa fa-plus-square fa-lg"></i> Add Food</a></h4>
                     </div>
                     <div class="card-body">
                         @include('foods.table')

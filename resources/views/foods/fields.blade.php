@@ -11,9 +11,10 @@
 </div>
 
 <!-- Info Field -->
-<div class="form-group col-sm-12 col-lg-12">
+{{-- <div class="form-group col-sm-12 col-lg-12"> --}}
+    <div class="form-group col-sm-6">
     {!! Form::label('info', 'Info:') !!}
-    {!! Form::textarea('info', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('info', null, ['class' => 'form-control','rows' =>3]) !!}
 </div>
 
 <!-- Price Field -->
