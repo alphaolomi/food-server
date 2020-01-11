@@ -11,19 +11,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Food
  * @package App\Models
- * @version January 11, 2020, 12:31 am UTC
+ * @version January 11, 2020, 12:43 am UTC
  *
- * @property string image
  * @property string title
  * @property string subTitle
- * @property string thumbnail
- * @property integer price
- * @property integer comments
+ * @property string info
+ * @property number price
  * @property integer rating
- * @property string description
- * @property boolean showHome
  */
-class Food extends Model
+class Food extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
     use HasMediaTrait;
@@ -40,15 +36,11 @@ class Food extends Model
 
 
     public $fillable = [
-        'image',
         'title',
         'subTitle',
-        'thumbnail',
+        'info',
         'price',
-        'comments',
-        'rating',
-        'description',
-        'showHome'
+        'rating'
     ];
 
     /**
@@ -58,15 +50,11 @@ class Food extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'image' => 'string',
         'title' => 'string',
         'subTitle' => 'string',
-        'thumbnail' => 'string',
-        'price' => 'integer',
-        'comments' => 'integer',
-        'rating' => 'integer',
-        'description' => 'string',
-        'showHome' => 'boolean'
+        'info' => 'string',
+        'price' => 'float',
+        'rating' => 'integer'
     ];
 
     /**
@@ -75,15 +63,11 @@ class Food extends Model
      * @var array
      */
     public static $rules = [
-        'image' => 'required',
         'title' => 'required',
         'subTitle' => 'required',
-        'thumbnail' => 'required',
+        'info' => 'required',
         'price' => 'required',
-        'comments' => 'required',
-        'rating' => 'required',
-        'description' => 'required',
-        'showHome' => 'required'
+        'rating' => 'required'
     ];
 
 

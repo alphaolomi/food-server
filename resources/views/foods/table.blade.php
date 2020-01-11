@@ -1,29 +1,21 @@
 <div class="table-responsive-sm">
     <table class="table table-striped" id="foods-table">
         <thead>
-            <th>Image</th>
-        <th>Title</th>
+            <th>Title</th>
         <th>Subtitle</th>
-        <th>Thumbnail</th>
+        <th>Info</th>
         <th>Price</th>
-        <th>Comments</th>
         <th>Rating</th>
-        <th>Description</th>
-        <th>Showhome</th>
             <th colspan="3">Action</th>
         </thead>
         <tbody>
         @foreach($foods as $food)
             <tr>
-                <td>{{ $food->image }}</td>
-            <td>{{ $food->title }}</td>
+                <td>{{ $food->title }}</td>
             <td>{{ $food->subTitle }}</td>
-            <td>{{ $food->thumbnail }}</td>
+            <td>{{ $food->info }}</td>
             <td>{{ $food->price }}</td>
-            <td>{{ $food->comments }}</td>
             <td>{{ $food->rating }}</td>
-            <td>{{ $food->description }}</td>
-            <td>{{ $food->showHome }}</td>
                 <td>
                     {!! Form::open(['route' => ['foods.destroy', $food->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
