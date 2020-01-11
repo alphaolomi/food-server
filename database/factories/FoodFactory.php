@@ -8,15 +8,11 @@ use Faker\Generator as Faker;
 $factory->define(Food::class, function (Faker $faker) {
 
     return [
-        'image' => $faker->word,
-        'title' => $faker->word,
-        'subTitle' => $faker->word,
-        'thumbnail' => $faker->word,
-        'price' => $faker->randomDigitNotNull,
-        'comments' => $faker->randomDigitNotNull,
+        'title' => $faker->city,
+        'subTitle' => $faker->text(),
+        'price' => $faker->numberBetween(2000,15000),
         'rating' => $faker->randomDigitNotNull,
-        'description' => $faker->text,
-        'showHome' => $faker->word,
+        'info' => $faker->text,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s'),
         'deleted_at' => $faker->date('Y-m-d H:i:s')
