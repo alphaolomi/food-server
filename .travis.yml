@@ -11,7 +11,7 @@ install:
   - composer install --no-interaction --prefer-dist --no-suggest
 
 before_script:
-  - mysql -e 'create database testing;'
+  - mysql -e 'create database food;'
   - php artisan serve &
 
 script:
