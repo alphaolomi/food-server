@@ -1,7 +1,7 @@
 [
     {
         "name": "id",
-        "dbType": "integer,true,true",
+        "dbType": "bigInteger,true,true",
         "htmlType": null,
         "validations": null,
         "searchable": false,
@@ -12,20 +12,8 @@
         "inView": false
     },
     {
-        "name": "image",
-        "dbType": "string,191",
-        "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
         "name": "title",
-        "dbType": "string,191",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -37,7 +25,7 @@
     },
     {
         "name": "subTitle",
-        "dbType": "string,191",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -48,9 +36,9 @@
         "inView": true
     },
     {
-        "name": "thumbnail",
-        "dbType": "string,191",
-        "htmlType": "text",
+        "name": "info",
+        "dbType": "text,65535",
+        "htmlType": "textarea",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -61,19 +49,7 @@
     },
     {
         "name": "price",
-        "dbType": "integer,false",
-        "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "comments",
-        "dbType": "integer,false",
+        "dbType": "decimal,8,2",
         "htmlType": null,
         "validations": "required",
         "searchable": true,
@@ -87,30 +63,6 @@
         "name": "rating",
         "dbType": "integer,false",
         "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "description",
-        "dbType": "text,65535",
-        "htmlType": "textarea",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true,
-        "inView": true
-    },
-    {
-        "name": "showHome",
-        "dbType": "boolean",
-        "htmlType": "checkbox,1",
         "validations": "required",
         "searchable": true,
         "fillable": true,
