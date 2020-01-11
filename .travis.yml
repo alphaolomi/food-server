@@ -1,20 +1,28 @@
-sudo: required
 language: php
-dist: trusty
+dist: bionic
 
 php:
-  - 7.3
+    - 7.3
+
+services:
+    - mysql
+
+cache:
+    directories:
+        - $HOME/.composer/cache
 
 install:
-  - cp .env.testing .env
-  - composer self-update
-  - composer install --no-interaction --prefer-dist --no-suggest
+    - cp .env.testing .env
+    - composer install --no-interaction --prefer-dist --no-suggest
 
 before_script:
-  - mysql -e 'create database testing;'
-  - php artisan serve &
+    - mysql -e 'create database testing;'
 
 script:
-  - php artisan key:generate
-  - php artisan migrate
-  - vendor/bin/phpunit
+    - php artisan key:generate
+    - php artisan migrate
+    - php artisan db:seed
+    - vendor/bin/phpunit
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
