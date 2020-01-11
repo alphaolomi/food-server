@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@include('inc.head')
+@include('layouts.head')
+
 <body>
-	<div class="wrapper">
-		@include('inc.side')
+    <div class="wrapper">
+        @include('layouts.sidebar')
 
-		<div class="main">
-			@include('inc.nav')
-			<main class="content">
+        <div class="main">
+            @include('layouts.navbar')
+            <main class="content">
 
-				@yield('content')
+                @yield('content')
 
-			</main>
+            </main>
 
-			<!-- @include('inc.footer') -->
-		</div>
-	</div>
+            {{-- @include('layouts.footer') --}}
+        </div>
+    </div>
 
 
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}" defer></script>	
-	<!-- <script src="{{ asset('js/settings.js') }}" defer></script> -->
-	@yield('scripts')
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('scripts')
 </body>
 
 </html>

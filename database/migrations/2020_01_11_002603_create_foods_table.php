@@ -21,6 +21,8 @@ class CreateFoodsTable extends Migration
             $table->decimal('price',8,2);
             $table->integer('rating');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
