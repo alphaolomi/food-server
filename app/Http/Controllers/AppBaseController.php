@@ -7,11 +7,16 @@ use Response;
 
 /**
  * @SWG\Swagger(
- *   basePath="/api/v1",
- *   @SWG\Info(
- *     title="Laravel Generator APIs",
- *     version="1.0.0",
- *   )
+ *  basePath="/api/v1",
+ *  schemes={"http", "https"},
+ *  @SWG\Info(
+ *      version="1.0.0",
+ *      title="FoodApp API",
+ *      description="FoodApp API description",
+ *      @SWG\Contact(
+ *          email="alphaolomi@gmail.com"
+ *      ),
+ *  )
  * )
  * This class should be parent class for other API controllers
  * Class AppBaseController
