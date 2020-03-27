@@ -23,6 +23,7 @@
         "laravel/ui": "^2.0",
         "laravelcollective/html": "^6.1",
         "owen-it/laravel-auditing": "^10.0",
+        "sentry/sentry-laravel": "^1.7",
         "spatie/laravel-medialibrary": "^7.0.0",
         "spatie/laravel-permission": "^3.5",
         "zircote/swagger-php": "2.*"
