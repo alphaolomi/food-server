@@ -9,9 +9,9 @@ use Response;
  * @SWG\Swagger(
  *  basePath="/api/v1",
  *  schemes={"http", "https"},
+ *  host=L5_SWAGGER_CONST_HOST,
  *  @SWG\Info(
  *      version="1.0.0",
- *      host=L5_SWAGGER_CONST_HOST,
  *      title="FoodApp API",
  *      description="FoodApp API description",
  *      @SWG\Contact(
