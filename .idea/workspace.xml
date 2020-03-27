@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5e1998-dac3-4456-94aa-76fa6b25ee70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/food-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/food-server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/l5-swagger.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/l5-swagger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/min.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/min.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/APIs/LoginApiTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/APIs/LoginApiTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="fa5e1998-dac3-4456-94aa-76fa6b25ee70" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,6 +152,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="ComposerJson.settings" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -182,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585343435684</updated>
-      <workItem from="1585343440415" duration="2273000" />
+      <workItem from="1585343440415" duration="2914000" />
     </task>
     <servers />
   </component>
@@ -194,5 +182,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2475" y="199" width="800" height="676" key="#Composer/1.25.1919.1031/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585343550518" />
+    <state x="2376" y="173" key="SettingsEditor" timestamp="1585348471461">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2376" y="173" key="SettingsEditor/1.25.1919.1031/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585348471461" />
   </component>
 </project>
