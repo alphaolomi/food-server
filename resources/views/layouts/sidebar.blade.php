@@ -1,26 +1,51 @@
-<nav id="sidebar" class="sidebar">
-			<div class="sidebar-content ">
-				<a class="sidebar-brand" href="{{route('home')}}">
-					<i class="align-middle" data-feather="box"></i>
-					<span class="align-middle">{{ config('app.name', 'Laravel') }}</span>
-				</a>
+<aside class="sidebar">
+    <div class="sidebar-container">
+        <div class="sidebar-header">
+            <div class="brand">
+                {{-- <div class="logo">
+                    <span class="l l1"></span>
+                    <span class="l l2"></span>
+                    <span class="l l3"></span>
+                    <span class="l l4"></span>
+                    <span class="l l5"></span>
+                </div> --}}
+                <span class="font-weight-bold">{{ config('app.name', 'Laravel') }}</span>
 
-				<ul class="sidebar-nav">
-                    @include('layouts.menu')
-				</ul>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul class="sidebar-menu metismenu" id="sidebar-menu">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i> Dashboard </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-th-large"></i> Items Manager <i class="fa arrow"></i>
+                    </a>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a href="items-list.html"> Items List </a>
+                        </li>
+                        <li>
+                            <a href="item-editor.html"> Item Editor </a>
+                        </li>
+                    </ul>
+                </li>
 
+                <li>
+                    <a href="forms.html">
+                        <i class="fa fa-pencil-square-o"></i> Forms </a>
+                </li>
 
-				<div class="sidebar-bottom d-none d-lg-block">
-					<div class="media">
-						<img class="rounded-circle mr-3" src="{{asset('img/avatars/avatar.jpg')}}" alt="james wood" width="40" height="40">
-						<div class="media-body">
-							<h5 class="mb-1">{{auth()->user()->name}}</h5>
-							<div>
-								<i class="fas fa-circle text-success"></i> Online
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</nav>
+            </ul>
+        </nav>
+    </div>
+    <footer class="sidebar-footer">
+        <ul class="sidebar-menu metismenu" id="customize-menu">
+            <li>
+                <a href=""><i class="fa fa-cog"></i> Admin </a>
+            </li>
+        </ul>
+    </footer>
+</aside>

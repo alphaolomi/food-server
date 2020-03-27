@@ -1,38 +1,24 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html class="no-js" lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- CSRF Token -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
-	<link href="{{asset('css/classic.css')}}" rel="stylesheet">
-
-    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
-
-	<link rel="preconnect" href="http://fonts.gstatic.com/" crossorigin>
-
-	
-	<!-- <script src="{{ asset('js/setting.js') }}" defer></script> -->
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
+    <link rel="stylesheet" id="theme-style" href="{{ asset('css/app-blue.css') }}">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 
 <body>
-	<main class="main d-flex w-100">
-	@yield('content')
-	</main>
-
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-
+    @yield('content')
+    <script src="{{ asset ('js/vendor.js') }}"></script>
+    <script src="{{ asset ('js/app2.js') }}"></script>
 </body>
-
-
 
 </html>
