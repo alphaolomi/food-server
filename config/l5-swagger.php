@@ -8,7 +8,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'title' => 'L5 Swagger UI',
+        'title' => env('APP_NAME', 'FoodApp') .' API Documentaion',
     ],
 
     'routes' => [
