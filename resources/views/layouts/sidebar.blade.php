@@ -44,7 +44,9 @@
     <footer class="sidebar-footer">
         <ul class="sidebar-menu metismenu" id="customize-menu">
             <li>
-                <a href=""><i class="fa fa-cog"></i> Admin </a>
+                <a href="">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    </i> Docs </a>
             </li>
         </ul>
     </footer>

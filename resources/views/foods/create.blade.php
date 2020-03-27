@@ -12,12 +12,12 @@
         <li class="breadcrumb-item active">Create</li>
     </ol>
     <div class="animated fadeIn">
-        @include('coreui-templates::common.errors')
+        @include('adminlte-templates::common.errors')
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">
-                        <i class="fa fa-plus-square-o fa-lg"></i>
+                    <div class="card-header border-bottom pl-4">
+                        <i class="fa fa-plus-square-o fa-lg pl-3 pr-2"></i>
                         <strong>Create Food</strong>
                     </div>
                     <div class="card-body">

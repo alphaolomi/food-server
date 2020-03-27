@@ -14,8 +14,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">
-                        <i class="fa fa-edit fa-lg"></i>
+                    <div class="card-header border-bottom pl-4">
+                        <i class="fa fa-edit fa-lg pl-3"></i>
                         <strong>Edit Food</strong>
                     </div>
                     <div class="card-body">

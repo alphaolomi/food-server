@@ -10,8 +10,8 @@
         @include('flash::message')
         <div class="row">
             <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card ">
+                    <div class="card-header pl-4 pt-3">
                         <h4><i class="fa fa-align-justify"></i>
                             Foods
                             <a class="btn btn-sm btn-primary" href="{{ route('foods.create') }}"><i
