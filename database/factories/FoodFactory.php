@@ -15,6 +15,6 @@ $factory->define(Food::class, function (Faker $faker) {
         'rating' => $faker->numberBetween(1,5),
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s'),
-        'deleted_at' => $faker->date('Y-m-d H:i:s')
+        'deleted_at' => null
     ];
 });

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Food
+ *  * Class Food
  * @package App\Models
  * @version January 11, 2020, 12:43 am UTC
  *
@@ -18,17 +18,68 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string info
  * @property number price
  * @property integer rating
+ *
+ * @SWG\Definition(
+ *      definition="Food",
+ *      required={"title", "subTitle", "info", "price", "rating"},
+ *      @SWG\Property(
+ *          property="id",
+ *          description="id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
+ *          property="title",
+ *          description="title",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="subTitle",
+ *          description="subTitle",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="info",
+ *          description="info",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="price",
+ *          description="price",
+ *          type="number",
+ *          format="number"
+ *      ),
+ *      @SWG\Property(
+ *          property="rating",
+ *          description="rating",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
+ *          property="created_at",
+ *          description="created_at",
+ *          type="string",
+ *          format="date-time"
+ *      ),
+ *      @SWG\Property(
+ *          property="updated_at",
+ *          description="updated_at",
+ *          type="string",
+ *          format="date-time"
+ *      ),
+ *      @SWG\Property(
+ *          property="deleted_at",
+ *          description="deleted_at",
+ *          type="string",
+ *          format="date-time"
+ *      )
+ * )
  */
-class Food extends Model implements Auditable
+class Food extends Model
 {
-    use \OwenIt\Auditing\Auditable;
-    use HasMediaTrait;
     use SoftDeletes;
 
     public $table = 'foods';
-
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'updated_at';
 
 
     protected $dates = ['deleted_at'];
