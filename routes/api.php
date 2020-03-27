@@ -13,3 +13,6 @@ Route::group(['middleware' => ['']], function () {
 
 });
 
+
+
+Route::resource('logins', 'LoginAPIController');
