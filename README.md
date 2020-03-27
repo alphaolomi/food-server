@@ -59,9 +59,9 @@ If you discover any security related issues, please email [alphaolomi@gmail.com]
 
 ## License
 
-The Apache 2 License. Please see [License File](LICENSE) for more information.
+ BSD 3-Clause License. Please see [License File](LICENSE) for more information.
 
-[ico-license]: https://img.shields.io/badge/license-BSD_2_Clause-green.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-BSD_3_Clause-green.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/com/alphaolomi/food-server?style=flat-square
 [link-travis]: https://travis-ci.com/alphaolomi/food-server
 [link-repo]: https://github.com/alphaolomi/food-server
