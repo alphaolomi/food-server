@@ -16,6 +16,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "infyomlabs/adminlte-templates": "7.0.x-dev",
         "infyomlabs/laravel-generator": "7.0.x-dev",
+        "infyomlabs/swagger-generator": "dev-master",
         "laravel/framework": "^7.0",
         "laravel/sanctum": "^2.1",
         "laravel/tinker": "^2.0",
