@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          */
         L5Swagger\L5SwaggerServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        OwenIt\Auditing\AuditingServiceProvider::class,
 
         /*
          * Application Service Providers...
