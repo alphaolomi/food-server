@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API\Mobile;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\Mobile\CreateLoginAPIRequest;
