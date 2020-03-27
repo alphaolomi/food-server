@@ -16,27 +16,27 @@
         <nav class="menu">
             <ul class="sidebar-menu metismenu" id="sidebar-menu">
                 <li class="active">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <i class="fa fa-home"></i> Dashboard </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-th-large"></i> Items Manager <i class="fa arrow"></i>
+                        <i class="fa fa-th-large"></i> Foods <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li>
-                            <a href="items-list.html"> Items List </a>
+                        <li >
+                            <a href="{{ route('foods.index') }}"> List </a>
                         </li>
                         <li>
-                            <a href="item-editor.html"> Item Editor </a>
+                            <a href="{{ route('foods.create') }}"> Add Food </a>
                         </li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="forms.html">
-                        <i class="fa fa-pencil-square-o"></i> Forms </a>
-                </li>
+{{--               <li>--}}
+{{--                    <a href="forms.html">--}}
+{{--                        <i class="fa fa-pencil-square-o"></i> Forms </a>--}}
+{{--                </li>--}}
 
             </ul>
         </nav>

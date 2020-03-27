@@ -2,26 +2,23 @@
 
 namespace App\Repositories;
 
-use App\Models\Food;
+use App\Models\Login;
 use App\Repositories\BaseRepository;
 
 /**
- * Class FoodRepository
+ * Class LoginRepository
  * @package App\Repositories
- * @version March 27, 2020, 9:28 pm UTC
+ * @version March 27, 2020, 9:46 pm UTC
 */
 
-class FoodRepository extends BaseRepository
+class LoginRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'title',
-        'subTitle',
-        'info',
-        'price',
-        'rating'
+        'email',
+        'password'
     ];
 
     /**
@@ -39,6 +36,6 @@ class FoodRepository extends BaseRepository
      **/
     public function model()
     {
-        return Food::class;
+        return Login::class;
     }
 }
