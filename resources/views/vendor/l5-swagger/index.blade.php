@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>{{config('l5-swagger.api.title')}}</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ l5_swagger_asset('swagger-ui.css') }}" >
+  <link rel="stylesheet" type="text/css" href="{{ secure_url('/')}}/docs/asset/swagger-ui.css" >
   <link rel="icon" type="image/png" href="{{ secure_url('/')}}/docs/asset/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="{{ secure_url('/')}}/docs/asset/favicon-16x16.png" sizes="16x16" />
   <style>
