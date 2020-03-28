@@ -6,8 +6,8 @@
   <title>{{config('l5-swagger.api.title')}}</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ l5_swagger_asset('swagger-ui.css') }}" >
-  <link rel="icon" type="image/png" href="{{ l5_swagger_asset('favicon-32x32.png') }}" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ l5_swagger_asset('favicon-16x16.png') }}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ url('/')}}/docs/asset/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ url('/')}}/docs/asset/favicon-16x16.png" sizes="16x16" />
   <style>
     html
     {
@@ -67,19 +67,22 @@
 
 <div id="swagger-ui"></div>
 
-<script src="{{ l5_swagger_asset('swagger-ui-bundle.js') }}"> </script>
-<script src="{{ l5_swagger_asset('swagger-ui-standalone-preset.js') }}"> </script>
+<script src="{{ url('/') }}/docs/asset/swagger-ui-bundle.js"> </script>
+<script src="{{ url('/') }}/docs/asset/swagger-ui-standalone-preset.js"> </script>
 <script>
 window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
     dom_id: '#swagger-ui',
 
-    url: "{!! $urlToDocs !!}",
+    // url: "{!! $urlToDocs !!}",
+    url: "{{ url('/') }}/docs/api-docs.json",
+
     operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
     configUrl: {!! isset($configUrl) ? '"' . $configUrl . '"' : 'null' !!},
     validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
-    oauth2RedirectUrl: "{{ route('l5-swagger.oauth2_callback') }}",
+    // oauth2RedirectUrl: "{{ route('l5-swagger.oauth2_callback') }}",
+    oauth2RedirectUrl: "{{ url('/') }}/api/oauth2-callback",
 
     requestInterceptor: function() {
       this.headers['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
