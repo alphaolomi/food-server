@@ -9,7 +9,7 @@ use Response;
  * @SWG\Swagger(
  *  basePath="/api/v1",
  *  schemes={"http", "https"},
- *  host=L5_SWAGGER_CONST_HOST,
+ *  host="https://food-engine.herokuapp.com",
  *  @SWG\Info(
  *      version="1.0.0",
  *      title="FoodApp API",
