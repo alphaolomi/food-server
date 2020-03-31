@@ -65,7 +65,7 @@ class AuthAPIController extends AppBaseController
 
         //        return $user->createToken($user->email)->plainTextToken;
         return $this->sendResponse(
-            ['token' => $user->createToken($user->email)->plainTextToken],
+            array_merge($user->toArray(),['token' => $user->createToken($user->email)->plainTextToken]),
             'Registered successfully '
         );
     }
