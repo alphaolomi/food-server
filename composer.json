@@ -24,16 +24,16 @@
         "laravelcollective/html": "^6.1",
         "owen-it/laravel-auditing": "^10.0",
         "sentry/sentry-laravel": "^1.7",
-        "spatie/laravel-medialibrary": "^7.0.0",
+        "spatie/laravel-medialibrary": "^8.0.0",
         "spatie/laravel-permission": "^3.5",
-        "zircote/swagger-php": "2.*"
+        "zircote/swagger-php": "3.*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
         "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^4.1",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^9.0.0"
     },
     "config": {
         "optimize-autoloader": true,
