@@ -11,19 +11,16 @@ An elegant backend server for simple food delivery application built with Larave
 
 ### 🏠 [Homepage](https://food-engine.herokuapp.com/)
 
-
 ## Features
 
 -   Laravel 7.0
 -   JWT Auth via [Laravel Sanctum](https://laravel.com/docs/master/sanctum)
--   REST Api 
+-   REST Api
 -   [Swagger API Docs](https://food-engine.herokuapp.com/api/documentation)
-
 
 ## 🚀 Development
 
 Composer and Yarn/NPM package manager are required
-
 
 Via Git
 
@@ -60,11 +57,11 @@ composer test
 
 ## ✍ Author
 
-* 👤 **Alpha Olomi**
+-   👤 **Alpha Olomi**
 
-    * Website: https://alphaolomi.me
-    * Twitter: [@alphaolomi](https://twitter.com/alphaolomi)
-    * Github: [@alphaolomi](https://github.com/alphaolomi)
+    -   Website: https://alphaolomi.me
+    -   Twitter: [@alphaolomi](https://twitter.com/alphaolomi)
+    -   Github: [@alphaolomi](https://github.com/alphaolomi)
 
 ## 🤝 Contributing
 
@@ -87,12 +84,9 @@ Give a ⭐️ if this project helped you! <img alt="GitHub stars" src="https://i
 <a href="https://www.linkedin.com/in/alphaolomi/">
     <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
 
+---
 
-
-***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
-
 
 [ico-license]: https://img.shields.io/badge/license-BSD_3_Clause-green.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/com/alphaolomi/food-server?style=flat-square
