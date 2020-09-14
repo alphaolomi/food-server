@@ -1,0 +1,2 @@
+
+        @include('common.paginate', ['records' => $$MODEL_NAME_PLURAL_CAMEL$])

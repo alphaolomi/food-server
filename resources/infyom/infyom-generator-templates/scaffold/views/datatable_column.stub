@@ -1,0 +1,1 @@
+Column::make('$FIELD_NAME$')

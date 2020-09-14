@@ -1,0 +1,85 @@
+<?php
+
+namespace $NAMESPACE_DATATABLES$;
+
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+use Yajra\DataTables\Services\DataTable;
+use Yajra\DataTables\Html\Button;
+use Yajra\DataTables\Html\Column;
+use Yajra\DataTables\Html\Editor\Fields;
+use Yajra\DataTables\EloquentDataTable;
+
+class $MODEL_NAME$DataTable extends DataTable
+{
+    /**
+     * Build DataTable class.
+     *
+     * @param mixed $query Results from query() method.
+     * @return \Yajra\DataTables\DataTableAbstract
+     */
+    public function dataTable($query)
+    {
+        $dataTable = new EloquentDataTable($query);
+
+        return $dataTable->addColumn('action', '$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.datatables_actions');
+    }
+
+    /**
+     * Get query source of dataTable.
+     *
+     * @param \App\Models\$MODEL_NAME$ $model
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function query($MODEL_NAME$ $model)
+    {
+        return $model->newQuery();
+    }
+
+    /**
+     * Optional method if you want to use html builder.
+     *
+     * @return \Yajra\DataTables\Html\Builder
+     */
+    public function html()
+    {
+        return $this->builder()
+            ->columns($this->getColumns())
+            ->addCheckbox([ 'printable' => false],true)
+            ->minifiedAjax()
+            ->addAction(['width' => '120px', 'printable' => false,'exportable'=>false ,'addClass'=>'text-center'])
+            ->parameters([
+                'dom'       => "<'row'<'col-sm-12'<'py-2 mb-2'B>>><'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                'stateSave' => true,
+                'order'     => [[0, 'desc']],
+                'buttons'   => [
+                    ['extend' => 'create', 'className' => 'btn btn-primary btn-sm no-corner',],
+                    ['extend' => 'export', 'className' => 'btn btn-primary btn-sm no-corner',],
+                    ['extend' => 'print', 'className' => 'btn btn-primary btn-sm no-corner',],
+                    ['extend' => 'reset', 'className' => 'btn btn-primary btn-sm no-corner',],
+                    ['extend' => 'reload', 'className' => 'btn btn-primary btn-sm no-corner',],
+                ],
+            ]);
+    }
+
+    /**
+     * Get columns.
+     *
+     * @return array
+     */
+    protected function getColumns()
+    {
+        return [
+            $DATATABLE_COLUMNS$
+        ];
+    }
+
+    /**
+     * Get filename for export.
+     *
+     * @return string
+     */
+    protected function filename()
+    {
+        return '$MODEL_NAME_PLURAL_SNAKE$_' . time();
+    }
+}

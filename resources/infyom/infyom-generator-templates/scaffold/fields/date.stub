@@ -1,0 +1,15 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    {!! Form::date('$FIELD_NAME$', null, ['class' => 'form-control','id'=>'$FIELD_NAME$']) !!}
+</div>
+
+@push('scripts')
+    <script defer type="text/javascript">
+        jQuery('#$FIELD_NAME$').datepicker({
+            format: 'yyyy-mm-dd',
+            useCurrent: true,
+            sideBySide: true
+        });
+    </script>
+@endpush

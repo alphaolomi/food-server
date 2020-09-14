@@ -1,0 +1,3 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<dt class="col-sm-3">{!! Form::label('$FIELD_NAME$', __('models/$TABLE_NAME$.fields.$FIELD_NAME$').':') !!}</dt>
+<dd class="col-sm-9">{{ $$MODEL_NAME_CAMEL$->$FIELD_NAME$ }}</dd>

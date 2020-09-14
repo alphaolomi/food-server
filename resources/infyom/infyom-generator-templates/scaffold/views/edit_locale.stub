@@ -1,0 +1,35 @@
+@extends('layouts.app')
+
+@section('title', __('models/$MODEL_NAME_PLURAL_CAMEL$.plural'))
+
+@section('breadcrumbs', Breadcrumbs::render('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit'))
+
+@section('content')
+    {{-- <div class="container-fluid"> --}}
+         <div class="animated fadeIn">
+             @include('common.errors')
+             <div class="row">
+                 <div class="col-lg-12">
+                      <div class="card">
+                          {{-- <div class="card-header">
+                              <i class="fa fa-edit fa-lg"></i>
+                              <strong>Edit @lang('models/$MODEL_NAME_PLURAL_CAMEL$.singular')</strong>
+                          </div> --}}
+                          <div class="card-body">
+                              {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'patch'$FILES$]) !!}
+
+                              @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+
+                              {!! Form::close() !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+    {{-- </div> --}}
+@endsection
+
+@push('scripts')
+    {!! JsValidator::formRequest(\App\Http\Requests\$PATH_PREFIX$Update$MODEL_NAME_HUMAN$Request::class) !!}
+@endpush
+
