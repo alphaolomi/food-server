@@ -47,8 +47,6 @@ return [
 
         'database_seeder'   => database_path('seeds/DatabaseSeeder.php'),
 
-        'modelJs'           => resource_path('assets/js/models/'),
-
         'factory'           => database_path('factories/'),
 
         'view_provider'     => app_path('Providers/ViewServiceProvider.php'),
@@ -77,6 +75,10 @@ return [
 
         'api_request'       => 'App\Http\Requests\API',
 
+        'seeder'            => 'Database\Seeders',
+
+        'factory'           => 'Database\Factories',
+
         'repository_test'   => 'Tests\Repositories',
 
         'api_test'          => 'Tests\APIs',
@@ -91,7 +93,7 @@ return [
     |
     */
 
-    'templates'         => 'adminlte-templates',
+    'templates'         => 'coreui-templates',
 
     /*
     |--------------------------------------------------------------------------
@@ -124,13 +126,13 @@ return [
 
         'softDelete' => true,
 
-        'save_schema_file' => true,
+        'save_schema_file' => false,
 
         'localized' => false,
 
-        'tables_searchable_default' => false,
+        'tables_searchable_default' => true,
 
-        'repository_pattern' => true,
+        'repository_pattern' => false,
 
         'excluded_fields' => ['id'], // Array of columns that doesn't required while creating module
     ],
@@ -162,11 +164,11 @@ return [
 
     'add_on' => [
 
-        'swagger'       => true,
+        'swagger'       => false,
 
         'tests'         => true,
 
-        'datatables'    => false,
+        'datatables'    => true,
 
         'menu'          => [
 
