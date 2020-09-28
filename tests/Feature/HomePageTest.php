@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -12,7 +13,7 @@ class HomePageTest extends TestCase
     /** @test */
     public function testHomePage()
     {
-        $user = factory(\App\User::class)->create();
+        $user = User::factory()->create();
 
         $response = $this->actingAs($user)
             ->get('/home');
