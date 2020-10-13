@@ -6,6 +6,6 @@
 		"test": "make test"
 	},
 	"devDependencies": {
-		"jshint": "0.9.1"
+		"jshint": "2.12.0"
 	}
 }
