@@ -24,7 +24,7 @@
         "maatwebsite/excel": "^3.1",
         "proengsoft/laravel-jsvalidation": "^4.3",
         "sopamo/laravel-filepond": "^0.5.0",
-        "spatie/laravel-medialibrary": "^8.7",
+        "spatie/laravel-medialibrary": "^9.0",
         "spatie/laravel-permission": "^3.16",
         "yajra/laravel-datatables": "^1.5"
     },
