@@ -5,9 +5,9 @@
   "private": true,
   "devDependencies": {
     "bundlesize": "^0.18.0",
-    "jsdoc-to-markdown": "^6.0.0",
+    "jsdoc-to-markdown": "^7.0.0",
     "lcov-result-merger": "^3.0.0",
-    "lerna": "^3.0.0",
+    "lerna": "^4.0.0",
     "lint-staged": "^10.0.0",
     "pre-commit": "^1.2.2",
     "prettier-eslint-cli": "^5.0.0",

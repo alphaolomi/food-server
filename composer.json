@@ -23,7 +23,7 @@
         "laravelcollective/html": "^6.2",
         "maatwebsite/excel": "^3.1",
         "proengsoft/laravel-jsvalidation": "^4.3",
-        "sopamo/laravel-filepond": "^0.5.0",
+        "sopamo/laravel-filepond": "^0.6.0",
         "spatie/laravel-medialibrary": "^9.0",
         "spatie/laravel-permission": "^4.0",
         "yajra/laravel-datatables": "^1.5"
