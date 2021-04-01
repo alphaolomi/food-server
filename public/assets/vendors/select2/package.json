@@ -52,7 +52,7 @@
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-jshint": "^3.0.0",
-    "grunt-contrib-nodeunit": "~2.1.0",
+    "grunt-contrib-nodeunit": "~3.0.0",
     "grunt-contrib-qunit": "~4.0.0",
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-symlink": "^1.0.0",

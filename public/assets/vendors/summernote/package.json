@@ -59,7 +59,7 @@
     "grunt-recess": "^1.0.1",
     "grunt-saucelabs": "^9.0.0",
     "grunt-webfont": "^1.7.1",
-    "husky": "^5.0.0",
+    "husky": "^6.0.0",
     "jquery": "^3.2.1",
     "karma": "^6.0.0",
     "karma-chrome-launcher": "^3.0.0",
