@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use OwenIt\Auditing\Contracts\Auditable;
+
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Illuminate\Database\Eloquent\Model;

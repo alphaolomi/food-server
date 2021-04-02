@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\API\Mobile;
+namespace App\Http\Requests\API;
 
 use InfyOm\Generator\Request\APIRequest;
 

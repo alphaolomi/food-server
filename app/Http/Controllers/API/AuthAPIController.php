@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\AppBaseController;
-use App\Http\Requests\API\Mobile\CreateLoginAPIRequest;
-use App\Http\Requests\API\Mobile\CreateRegisterAPIRequest;
+use App\Http\Requests\API\CreateLoginAPIRequest;
+use App\Http\Requests\API\CreateRegisterAPIRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;

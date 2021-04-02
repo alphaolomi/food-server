@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "alphao/food",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Food App Backend.",
     "keywords": [
-        "framework",
-        "laravel"
+        "food",
+        "app"
     ],
     "license": "MIT",
     "require": {
