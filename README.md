@@ -1,4 +1,7 @@
-# FOOD API Server 👋
+<p align="center"><img src="public/imgs/cover.png"></p>
+<br>
+<h1 align="center">Food App Backend👋</h1>
+<br>
 
 [![Build Status][ico-travis]]([link-travis])
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://food-engine.herokuapp.com/api/documentation)
@@ -7,16 +10,25 @@
 ![Maintained:yes][ico-maintained]
 [![PRs Welcome][ico-pr]][link-pr]
 
+
+<br>
 An elegant backend server for simple food delivery application built with Laravel.
 
-### 🏠 [Homepage](https://food-engine.herokuapp.com/)
+<br>
+
+
+### 🏠 Homepage [food-engine.herokuapp.com](https://food-engine.herokuapp.com/)
+
+<br>
 
 ## Features
 
--   Laravel 7.0
+-   Laravel 8.0
 -   JWT Auth via [Laravel Sanctum](https://laravel.com/docs/master/sanctum)
--   REST Api
--   [Swagger API Docs](https://food-engine.herokuapp.com/api/documentation)
+-   REST API
+-   [API Docs with OpenAPI](https://food-engine.herokuapp.com/api/documentation)
+
+<br>
 
 ## 🚀 Development
 
@@ -49,19 +61,24 @@ php artisan migrate
 php artisan db:seed
 ```
 
+
+<br>
+
 ## Run tests
 
 ```sh
 composer test
 ```
 
+
+<br>
+
 ## ✍ Author
 
--   👤 **Alpha Olomi**
+-   👤 **Alpha Olomi** -   Twitter: [@alphaolomi](https://twitter.com/alphaolomi) -   Github: [@alphaolomi](https://github.com/alphaolomi)
 
-    -   Website: https://alphaolomi.me
-    -   Twitter: [@alphaolomi](https://twitter.com/alphaolomi)
-    -   Github: [@alphaolomi](https://github.com/alphaolomi)
+
+<br />
 
 ## 🤝 Contributing
 
@@ -69,13 +86,21 @@ Pull requests are most welcome, Contributions, issues and feature requests are w
 
 Feel free to check [issues page](https://github.com/alphaolomi/food-app/issues). You can also take a look at the [contributing guide](https://github.com/alphaolomi/food-app/issues).
 
+
+<br />
+
 ## 🔒 Security
 
 If you discover any security related issues, please email [alphaolomi@gmail.com](mailto:alphaolomigmail.com) instead of using the issue tracker.
 
+<br />
+
+
 ## 📄 License
 
 BSD 3-Clause License. Please see [License File](LICENSE) for more information.
+
+<br />
 
 ## Show your support
 
@@ -85,6 +110,8 @@ Give a ⭐️ if this project helped you! <img alt="GitHub stars" src="https://i
     <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
 
 ---
+
+<br />
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
 
