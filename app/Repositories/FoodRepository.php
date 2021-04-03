@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class FoodRepository
  * @package App\Repositories
- * @version March 27, 2020, 9:28 pm UTC
+ * @version April 3, 2021, 10:35 pm UTC
 */
 
 class FoodRepository extends BaseRepository
@@ -17,11 +17,12 @@ class FoodRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'title',
-        'subTitle',
-        'info',
-        'price',
-        'rating'
+        'name',
+        'sub_name',
+        'is_active',
+        'is_available',
+        'description',
+        'price'
     ];
 
     /**

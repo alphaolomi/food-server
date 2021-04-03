@@ -1,53 +1,15 @@
-<aside class="sidebar">
-    <div class="sidebar-container">
-        <div class="sidebar-header">
-            <div class="brand">
-                {{-- <div class="logo">
-                    <span class="l l1"></span>
-                    <span class="l l2"></span>
-                    <span class="l l3"></span>
-                    <span class="l l4"></span>
-                    <span class="l l5"></span>
-                </div> --}}
-                <span class="font-weight-bold">{{ config('app.name', 'Laravel') }}</span>
-
-            </div>
-        </div>
-        <nav class="menu">
-            <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                <li class="active">
-                    <a href="{{ route('home') }}">
-                        <i class="fa fa-home"></i> Dashboard </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-th-large"></i> Foods <i class="fa arrow"></i>
-                    </a>
-                    <ul class="sidebar-nav">
-                        <li >
-                            <a href="{{ route('foods.index') }}"> List </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('foods.create') }}"> Add Food </a>
-                        </li>
-                    </ul>
-                </li>
-
-{{--               <li>--}}
-{{--                    <a href="forms.html">--}}
-{{--                        <i class="fa fa-pencil-square-o"></i> Forms </a>--}}
-{{--                </li>--}}
-
-            </ul>
-        </nav>
+<aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+        <img class="navbar-brand-full app-header-logo" src="{{ asset('img/vector/default-monochrome.svg') }}" width="125"
+             alt="Food App Logo">
+        <a href="{{ url('/') }}"></a>
     </div>
-    <footer class="sidebar-footer">
-        <ul class="sidebar-menu metismenu" id="customize-menu">
-            <li>
-                <a href="">
-                    <i class="fa fa-book" aria-hidden="true"></i>
-                    </i> Docs </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="sidebar-brand sidebar-brand-sm">
+        <a href="{{ url('/') }}" class="small-sidebar-text">
+            <img class="navbar-brand-full" src="{{ asset('img/logo2.png') }}" width="45px" alt=""/>
+        </a>
+    </div>
+    <ul class="sidebar-menu">
+        @include('layouts.menu')
+    </ul>
 </aside>

@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Now-Bold
+font link: https://hanken.co/product/now/
+font author: Hanken Design Co.
+font author site: https://hanken.co/
+
+
+icon designer: Ramakrishna Venkatesan
+icon designer link: /RamakrishnaUX
+        
+{"bg":"#E5EAFE","font":"#22255B","icon-gradient-0":"#5106FF","icon-gradient-1":"#61CBF2","slogan":"#36396f"}
+      

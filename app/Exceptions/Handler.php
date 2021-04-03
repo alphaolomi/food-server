@@ -22,28 +22,10 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontFlash = [
+        'current_password',
         'password',
         'password_confirmation',
     ];
-
-     /**
-     * Report or log an exception.
-     *
-     * @param  \Throwable  $exception
-     * @return void
-     *
-     * @throws \Exception
-     */
-    public function report(Throwable $exception)
-    {
-        // Sentry\configureScope(function (\Sentry\State\Scope $scope): void {
-        //     $scope->setUser(['email' => auth()->user->email]);
-        //   });
-        if (app()->bound('sentry') && $this->shouldReport($exception)) {
-            app('sentry')->captureException($exception);
-        }
-        parent::report($exception);
-    }
 
     /**
      * Register the exception handling callbacks for the application.
@@ -52,8 +34,8 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        //
+        $this->reportable(function (Throwable $e) {
+            //
+        });
     }
-
-
 }

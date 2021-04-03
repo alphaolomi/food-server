@@ -3,13 +3,12 @@
 use App\Models\Food;
 use App\Repositories\FoodRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use Tests\ApiTestTrait;
 
 class FoodRepositoryTest extends TestCase
 {
-    use ApiTestTrait,RefreshDatabase;
+    use ApiTestTrait, DatabaseTransactions;
 
     /**
      * @var FoodRepository
@@ -27,7 +26,7 @@ class FoodRepositoryTest extends TestCase
      */
     public function test_create_food()
     {
-        $food = factory(Food::class)->make()->toArray();
+        $food = Food::factory()->make()->toArray();
 
         $createdFood = $this->foodRepo->create($food);
 
@@ -43,11 +42,10 @@ class FoodRepositoryTest extends TestCase
      */
     public function test_read_food()
     {
-        $food = factory(Food::class)->create();
-        $this->assertDatabaseHas('foods',$food->toArray());
-dd($food);
+        $food = Food::factory()->create();
+
         $dbFood = $this->foodRepo->find($food->id);
-        dd($dbFood);
+
         $dbFood = $dbFood->toArray();
         $this->assertModelData($food->toArray(), $dbFood);
     }
@@ -57,8 +55,8 @@ dd($food);
      */
     public function test_update_food()
     {
-        $food = factory(Food::class)->create();
-        $fakeFood = factory(Food::class)->make()->toArray();
+        $food = Food::factory()->create();
+        $fakeFood = Food::factory()->make()->toArray();
 
         $updatedFood = $this->foodRepo->update($fakeFood, $food->id);
 
@@ -72,7 +70,7 @@ dd($food);
      */
     public function test_delete_food()
     {
-        $food = factory(Food::class)->create();
+        $food = Food::factory()->create();
 
         $resp = $this->foodRepo->delete($food->id);
 

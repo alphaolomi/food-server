@@ -1,4 +1,0 @@
-    <label class="custom-control custom-radio">
-        {!! Form::radio('$FIELD_NAME$', "$VALUE$", null, ['class' => 'custom-control-input']) !!}
-        <span class="custom-control-label">$LABEL$</span>
-    </label>

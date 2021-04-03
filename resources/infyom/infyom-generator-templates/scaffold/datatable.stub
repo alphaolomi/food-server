@@ -4,9 +4,6 @@ namespace $NAMESPACE_DATATABLES$;
 
 use $NAMESPACE_MODEL$\$MODEL_NAME$;
 use Yajra\DataTables\Services\DataTable;
-use Yajra\DataTables\Html\Button;
-use Yajra\DataTables\Html\Column;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\EloquentDataTable;
 
 class $MODEL_NAME$DataTable extends DataTable
@@ -44,19 +41,18 @@ class $MODEL_NAME$DataTable extends DataTable
     {
         return $this->builder()
             ->columns($this->getColumns())
-            ->addCheckbox([ 'printable' => false],true)
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false,'exportable'=>false ,'addClass'=>'text-center'])
+            ->addAction(['width' => '120px', 'printable' => false])
             ->parameters([
-                'dom'       => "<'row'<'col-sm-12'<'py-2 mb-2'B>>><'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                'dom'       => 'Bfrtip',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' => 'btn btn-primary btn-sm no-corner',],
-                    ['extend' => 'export', 'className' => 'btn btn-primary btn-sm no-corner',],
-                    ['extend' => 'print', 'className' => 'btn btn-primary btn-sm no-corner',],
-                    ['extend' => 'reset', 'className' => 'btn btn-primary btn-sm no-corner',],
-                    ['extend' => 'reload', 'className' => 'btn btn-primary btn-sm no-corner',],
+                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
                 ],
             ]);
     }
@@ -80,6 +76,6 @@ class $MODEL_NAME$DataTable extends DataTable
      */
     protected function filename()
     {
-        return '$MODEL_NAME_PLURAL_SNAKE$_' . time();
+        return '$MODEL_NAME_PLURAL_SNAKE$_datatable_' . time();
     }
 }

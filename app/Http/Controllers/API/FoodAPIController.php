@@ -8,6 +8,7 @@ use App\Models\Food;
 use App\Repositories\FoodRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use App\Http\Resources\FoodResource;
 use Response;
 
 /**
@@ -30,10 +31,10 @@ class FoodAPIController extends AppBaseController
      * @return Response
      *
      * @SWG\Get(
-     *      path="/foods",
-     *      summary="Get a listing of the Foods.",
+     *      path="/food",
+     *      summary="Get a listing of the Food.",
      *      tags={"Food"},
-     *      description="Get all Foods",
+     *      description="Get all Food",
      *      produces={"application/json"},
      *      @SWG\Response(
      *          response=200,
@@ -59,13 +60,13 @@ class FoodAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $foods = $this->foodRepository->all(
+        $food = $this->foodRepository->all(
             $request->except(['skip', 'limit']),
             $request->get('skip'),
             $request->get('limit')
         );
 
-        return $this->sendResponse($foods->toArray(), 'Foods retrieved successfully');
+        return $this->sendResponse(FoodResource::collection($food), 'Food retrieved successfully');
     }
 
     /**
@@ -73,7 +74,7 @@ class FoodAPIController extends AppBaseController
      * @return Response
      *
      * @SWG\Post(
-     *      path="/foods",
+     *      path="/food",
      *      summary="Store a newly created Food in storage",
      *      tags={"Food"},
      *      description="Store Food",
@@ -112,7 +113,7 @@ class FoodAPIController extends AppBaseController
 
         $food = $this->foodRepository->create($input);
 
-        return $this->sendResponse($food->toArray(), 'Food saved successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food saved successfully');
     }
 
     /**
@@ -120,7 +121,7 @@ class FoodAPIController extends AppBaseController
      * @return Response
      *
      * @SWG\Get(
-     *      path="/foods/{id}",
+     *      path="/food/{id}",
      *      summary="Display the specified Food",
      *      tags={"Food"},
      *      description="Get Food",
@@ -162,7 +163,7 @@ class FoodAPIController extends AppBaseController
             return $this->sendError('Food not found');
         }
 
-        return $this->sendResponse($food->toArray(), 'Food retrieved successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food retrieved successfully');
     }
 
     /**
@@ -171,7 +172,7 @@ class FoodAPIController extends AppBaseController
      * @return Response
      *
      * @SWG\Put(
-     *      path="/foods/{id}",
+     *      path="/food/{id}",
      *      summary="Update the specified Food in storage",
      *      tags={"Food"},
      *      description="Update Food",
@@ -224,7 +225,7 @@ class FoodAPIController extends AppBaseController
 
         $food = $this->foodRepository->update($input, $id);
 
-        return $this->sendResponse($food->toArray(), 'Food updated successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food updated successfully');
     }
 
     /**
@@ -232,7 +233,7 @@ class FoodAPIController extends AppBaseController
      * @return Response
      *
      * @SWG\Delete(
-     *      path="/foods/{id}",
+     *      path="/food/{id}",
      *      summary="Remove the specified Food from storage",
      *      tags={"Food"},
      *      description="Delete Food",

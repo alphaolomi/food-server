@@ -1,3 +1,0 @@
-Auth::routes(['verify' => false,'register'='true']);
-
-Route::get('/home', 'HomeController@index')->name('home'); // ->middleware('verified');
