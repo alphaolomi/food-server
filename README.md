@@ -1,4 +1,4 @@
-<p align="center"><img src="public/imgs/cover.png"></p>
+<p align="center"><img src="public/img/cover.png"></p>
 <br>
 <h1 align="center">Food App Backend👋</h1>
 <br>
