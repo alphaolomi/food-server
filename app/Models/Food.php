@@ -2,72 +2,64 @@
 
 namespace App\Models;
 
+use Eloquent as Model;
 
-use Spatie\MediaLibrary\HasMedia\HasMedia;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- *  * Class Food
- * @package App\Models
- * @version January 11, 2020, 12:43 am UTC
- *
- * @property string title
- * @property string subTitle
- * @property string info
- * @property number price
- * @property integer rating
- *
- * @SWG\Definition(
+ * @OA\Definition(
  *      definition="Food",
- *      required={"title", "subTitle", "info", "price", "rating"},
- *      @SWG\Property(
+ *      required={"name", "is_active", "is_available"},
+ *      @OA\Property(
  *          property="id",
  *          description="id",
  *          type="integer",
  *          format="int32"
  *      ),
- *      @SWG\Property(
- *          property="title",
- *          description="title",
+ *      @OA\Property(
+ *          property="name",
+ *          description="name",
  *          type="string"
  *      ),
- *      @SWG\Property(
- *          property="subTitle",
- *          description="subTitle",
+ *      @OA\Property(
+ *          property="sub_name",
+ *          description="sub_name",
  *          type="string"
  *      ),
- *      @SWG\Property(
- *          property="info",
- *          description="info",
+ *      @OA\Property(
+ *          property="is_active",
+ *          description="is_active",
+ *          type="boolean"
+ *      ),
+ *      @OA\Property(
+ *          property="is_available",
+ *          description="is_available",
+ *          type="boolean"
+ *      ),
+ *      @OA\Property(
+ *          property="description",
+ *          description="description",
  *          type="string"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="price",
  *          description="price",
  *          type="number",
  *          format="number"
  *      ),
- *      @SWG\Property(
- *          property="rating",
- *          description="rating",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="created_at",
  *          description="created_at",
  *          type="string",
  *          format="date-time"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="updated_at",
  *          description="updated_at",
  *          type="string",
  *          format="date-time"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="deleted_at",
  *          description="deleted_at",
  *          type="string",
@@ -77,21 +69,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Food extends Model
 {
-    use SoftDeletes;
+
+    use HasFactory;
 
     public $table = 'foods';
 
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
 
-    protected $dates = ['deleted_at'];
 
 
 
     public $fillable = [
-        'title',
-        'subTitle',
-        'info',
-        'price',
-        'rating'
+        'name',
+        'sub_name',
+        'is_active',
+        'is_available',
+        'description',
+        'price'
     ];
 
     /**
@@ -101,11 +96,12 @@ class Food extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'title' => 'string',
-        'subTitle' => 'string',
-        'info' => 'string',
-        'price' => 'float',
-        'rating' => 'integer'
+        'name' => 'string',
+        'sub_name' => 'string',
+        'is_active' => 'boolean',
+        'is_available' => 'boolean',
+        'description' => 'string',
+        'price' => 'float'
     ];
 
     /**
@@ -114,11 +110,15 @@ class Food extends Model
      * @var array
      */
     public static $rules = [
-        'title' => 'required',
-        'subTitle' => 'required',
-        'info' => 'required',
-        'price' => 'required',
-        'rating' => 'required'
+        'name' => 'required|string|max:255',
+        'sub_name' => 'nullable|string|max:255',
+        // 'is_active' => 'required|boolean',
+        // 'is_available' => 'required|boolean',
+        'description' => 'nullable|string',
+        'price' => 'nullable|numeric',
+        'created_at' => 'nullable',
+        'updated_at' => 'nullable',
+        'deleted_at' => 'nullable'
     ];
 
 

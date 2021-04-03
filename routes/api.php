@@ -1,15 +1,22 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('ping', function () {
-    return response()->json('pong', 200);
-});
-Route::post('login', 'AuthAPIController@login')->name('login');
-Route::post('register', 'AuthAPIController@register')->name('register');
+// Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('logout', 'AuthAPIController@logout')->name('logout');
-    Route::resource('foods', 'FoodAPIController');
+
+    Route::resource('food', App\Http\Controllers\API\FoodAPIController::class);
+
+    Route::group(['middleware' => ['role:customer']], function () {
+        //
+    });
+
+    Route::group(['prefix' => 'admin', 'middleware' => ['role:vendor']], function () {
+        //
+    });
+
+    Route::post('/logout', [AuthController::class, 'logout']);
 });

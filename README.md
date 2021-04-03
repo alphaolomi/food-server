@@ -21,7 +21,7 @@ An elegant backend server for simple food delivery application built with Larave
 
 <br>
 
-## Features
+## Technologies and Features Used
 
 -   Laravel 8.0
 -   JWT Auth via [Laravel Sanctum](https://laravel.com/docs/master/sanctum)
@@ -91,14 +91,14 @@ Feel free to check [issues page](https://github.com/alphaolomi/food-app/issues).
 
 ## 🔒 Security
 
-If you discover any security related issues, please email [alphaolomi@gmail.com](mailto:alphaolomigmail.com) instead of using the issue tracker.
+If you discover any security related issues, please email [alphaolomi@gmail.com](mailto:alphaolomi@gmail.com) instead of using the issue tracker.
 
 <br />
 
 
 ## 📄 License
 
-BSD 3-Clause License. Please see [License File](LICENSE) for more information.
+BSD 3-Clause License. Please see [License File](LICENSE.md) for more information.
 
 <br />
 

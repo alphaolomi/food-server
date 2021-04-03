@@ -6,19 +6,30 @@ use InfyOm\Generator\Utils\ResponseUtil;
 use Response;
 
 /**
- * @SWG\Swagger(
- *  basePath="/api/v1",
- *  schemes={"http", "https"},
- *  host="https://food-engine.herokuapp.com",
- *  @SWG\Info(
+ * @OA\Info(
  *      version="1.0.0",
- *      title="FoodApp API",
- *      description="FoodApp API description",
- *      @SWG\Contact(
+ *      title="FoodAPP OpenAP Documentation",
+ *      description="OpenApi description",
+ *      @OA\Contact(
  *          email="alphaolomi@gmail.com"
  *      ),
- *  )
+ *      @OA\License(
+ *          name="BSD 3-Clause License",
+ *          url="http://www.apache.org/licenses/LICENSE-2.0.html"
+ *      )
  * )
+ *
+ * @OA\Server(
+ *      url=L5_SWAGGER_CONST_HOST,
+ *      description="Demo API Server"
+ * )
+
+ *
+ * @OA\Tag(
+ *     name="Food",
+ *     description="API Endpoints of Foods"
+ * )
+
  * This class should be parent class for other API controllers
  * Class AppBaseController
  */

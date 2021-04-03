@@ -8,6 +8,7 @@ use App\Models\Food;
 use App\Repositories\FoodRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use App\Http\Resources\FoodResource;
 use Response;
 
 /**
@@ -29,80 +30,83 @@ class FoodAPIController extends AppBaseController
      * @param Request $request
      * @return Response
      *
-     * @SWG\Get(
-     *      path="/foods",
-     *      summary="Get a listing of the Foods.",
+     * @OA\Get(
+     *      path="/food",
+     *      summary="Get a listing of the Food.",
      *      tags={"Food"},
-     *      description="Get all Foods",
-     *      produces={"application/json"},
-     *      @SWG\Response(
+     *      description="Get all Food",
+     *      @OA\Response(
      *          response=200,
-     *          description="successful operation",
-     *          @SWG\Schema(
-     *              type="object",
-     *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
-     *              ),
-     *              @SWG\Property(
-     *                  property="data",
-     *                  type="array",
-     *                  @SWG\Items(ref="#/definitions/Food")
-     *              ),
-     *              @SWG\Property(
-     *                  property="message",
-     *                  type="string"
-     *              )
-     *          )
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/FoodResource")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
      *      )
      * )
      */
     public function index(Request $request)
     {
-        $foods = $this->foodRepository->all(
+        $food = $this->foodRepository->all(
             $request->except(['skip', 'limit']),
             $request->get('skip'),
             $request->get('limit')
         );
 
-        return $this->sendResponse($foods->toArray(), 'Foods retrieved successfully');
+        return $this->sendResponse(FoodResource::collection($food), 'Food retrieved successfully');
     }
 
     /**
      * @param CreateFoodAPIRequest $request
      * @return Response
      *
-     * @SWG\Post(
-     *      path="/foods",
+     * @OA\Post(
+     *      path="/food",
      *      summary="Store a newly created Food in storage",
      *      tags={"Food"},
      *      description="Store Food",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="body",
      *          in="body",
      *          description="Food that should be stored",
      *          required=false,
-     *          @SWG\Schema(ref="#/definitions/Food")
+     *          @OA\Schema(ref="#/definitions/Food")
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
      *          )
+     *      ),
+     *   @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
      *      )
      * )
      */
@@ -112,40 +116,40 @@ class FoodAPIController extends AppBaseController
 
         $food = $this->foodRepository->create($input);
 
-        return $this->sendResponse($food->toArray(), 'Food saved successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food saved successfully');
     }
 
     /**
      * @param int $id
      * @return Response
      *
-     * @SWG\Get(
-     *      path="/foods/{id}",
+     * @OA\Get(
+     *      path="/food/{id}",
      *      summary="Display the specified Food",
      *      tags={"Food"},
      *      description="Get Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
@@ -162,7 +166,7 @@ class FoodAPIController extends AppBaseController
             return $this->sendError('Food not found');
         }
 
-        return $this->sendResponse($food->toArray(), 'Food retrieved successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food retrieved successfully');
     }
 
     /**
@@ -170,40 +174,40 @@ class FoodAPIController extends AppBaseController
      * @param UpdateFoodAPIRequest $request
      * @return Response
      *
-     * @SWG\Put(
-     *      path="/foods/{id}",
+     * @OA\Put(
+     *      path="/food/{id}",
      *      summary="Update the specified Food in storage",
      *      tags={"Food"},
      *      description="Update Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="body",
      *          in="body",
      *          description="Food that should be updated",
      *          required=false,
-     *          @SWG\Schema(ref="#/definitions/Food")
+     *          @OA\Schema(ref="#/definitions/Food")
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
@@ -224,40 +228,40 @@ class FoodAPIController extends AppBaseController
 
         $food = $this->foodRepository->update($input, $id);
 
-        return $this->sendResponse($food->toArray(), 'Food updated successfully');
+        return $this->sendResponse(new FoodResource($food), 'Food updated successfully');
     }
 
     /**
      * @param int $id
      * @return Response
      *
-     * @SWG\Delete(
-     *      path="/foods/{id}",
+     * @OA\Delete(
+     *      path="/food/{id}",
      *      summary="Remove the specified Food from storage",
      *      tags={"Food"},
      *      description="Delete Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  type="string"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )

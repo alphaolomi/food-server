@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\FoodDataTable;
 use App\Http\Requests\CreateFoodRequest;
 use App\Http\Requests\UpdateFoodRequest;
 use App\Repositories\FoodRepository;
 use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
-use Flash;
 use Response;
 
 class FoodController extends AppBaseController
@@ -23,16 +22,12 @@ class FoodController extends AppBaseController
     /**
      * Display a listing of the Food.
      *
-     * @param Request $request
-     *
+     * @param FoodDataTable $foodDataTable
      * @return Response
      */
-    public function index(Request $request)
+    public function index(FoodDataTable $foodDataTable)
     {
-        $foods = $this->foodRepository->all();
-
-        return view('foods.index')
-            ->with('foods', $foods);
+        return $foodDataTable->render('food.index');
     }
 
     /**
@@ -42,7 +37,7 @@ class FoodController extends AppBaseController
      */
     public function create()
     {
-        return view('foods.create');
+        return view('food.create');
     }
 
     /**
@@ -58,15 +53,15 @@ class FoodController extends AppBaseController
 
         $food = $this->foodRepository->create($input);
 
-        Flash::success('Food saved successfully.');
+        toast('Food saved successfully.','success');
 
-        return redirect(route('foods.index'));
+        return redirect(route('food.index'));
     }
 
     /**
      * Display the specified Food.
      *
-     * @param int $id
+     * @param  int $id
      *
      * @return Response
      */
@@ -75,18 +70,18 @@ class FoodController extends AppBaseController
         $food = $this->foodRepository->find($id);
 
         if (empty($food)) {
-            Flash::error('Food not found');
+            toast('Food not found','error');
 
-            return redirect(route('foods.index'));
+            return redirect(route('food.index'));
         }
 
-        return view('foods.show')->with('food', $food);
+        return view('food.show')->with('food', $food);
     }
 
     /**
      * Show the form for editing the specified Food.
      *
-     * @param int $id
+     * @param  int $id
      *
      * @return Response
      */
@@ -95,18 +90,18 @@ class FoodController extends AppBaseController
         $food = $this->foodRepository->find($id);
 
         if (empty($food)) {
-            Flash::error('Food not found');
+            toast('Food not found','error');
 
-            return redirect(route('foods.index'));
+            return redirect(route('food.index'));
         }
 
-        return view('foods.edit')->with('food', $food);
+        return view('food.edit')->with('food', $food);
     }
 
     /**
      * Update the specified Food in storage.
      *
-     * @param int $id
+     * @param  int              $id
      * @param UpdateFoodRequest $request
      *
      * @return Response
@@ -116,24 +111,22 @@ class FoodController extends AppBaseController
         $food = $this->foodRepository->find($id);
 
         if (empty($food)) {
-            Flash::error('Food not found');
+            toast('Food not found','error');
 
-            return redirect(route('foods.index'));
+            return redirect(route('food.index'));
         }
 
         $food = $this->foodRepository->update($request->all(), $id);
 
-        Flash::success('Food updated successfully.');
+        toast('Food updated successfully.','success');
 
-        return redirect(route('foods.index'));
+        return redirect(route('food.index'));
     }
 
     /**
      * Remove the specified Food from storage.
      *
-     * @param int $id
-     *
-     * @throws \Exception
+     * @param  int $id
      *
      * @return Response
      */
@@ -142,15 +135,15 @@ class FoodController extends AppBaseController
         $food = $this->foodRepository->find($id);
 
         if (empty($food)) {
-            Flash::error('Food not found');
+            toast('Food not found','error');
 
-            return redirect(route('foods.index'));
+            return redirect(route('food.index'));
         }
 
         $this->foodRepository->delete($id);
 
-        Flash::success('Food deleted successfully.');
+        toast('Food deleted successfully.','success');
 
-        return redirect(route('foods.index'));
+        return redirect(route('food.index'));
     }
 }
