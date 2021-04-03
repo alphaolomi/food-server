@@ -30,31 +30,23 @@ class FoodAPIController extends AppBaseController
      * @param Request $request
      * @return Response
      *
-     * @SWG\Get(
+     * @OA\Get(
      *      path="/food",
      *      summary="Get a listing of the Food.",
      *      tags={"Food"},
      *      description="Get all Food",
-     *      produces={"application/json"},
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
-     *          description="successful operation",
-     *          @SWG\Schema(
-     *              type="object",
-     *              @SWG\Property(
-     *                  property="success",
-     *                  type="boolean"
-     *              ),
-     *              @SWG\Property(
-     *                  property="data",
-     *                  type="array",
-     *                  @SWG\Items(ref="#/definitions/Food")
-     *              ),
-     *              @SWG\Property(
-     *                  property="message",
-     *                  type="string"
-     *              )
-     *          )
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/FoodResource")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
      *      )
      * )
      */
@@ -73,37 +65,48 @@ class FoodAPIController extends AppBaseController
      * @param CreateFoodAPIRequest $request
      * @return Response
      *
-     * @SWG\Post(
+     * @OA\Post(
      *      path="/food",
      *      summary="Store a newly created Food in storage",
      *      tags={"Food"},
      *      description="Store Food",
-     *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="body",
      *          in="body",
      *          description="Food that should be stored",
      *          required=false,
-     *          @SWG\Schema(ref="#/definitions/Food")
+     *          @OA\Schema(ref="#/definitions/Food")
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
      *          )
+     *      ),
+     *   @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
      *      )
      * )
      */
@@ -120,33 +123,33 @@ class FoodAPIController extends AppBaseController
      * @param int $id
      * @return Response
      *
-     * @SWG\Get(
+     * @OA\Get(
      *      path="/food/{id}",
      *      summary="Display the specified Food",
      *      tags={"Food"},
      *      description="Get Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
@@ -171,40 +174,40 @@ class FoodAPIController extends AppBaseController
      * @param UpdateFoodAPIRequest $request
      * @return Response
      *
-     * @SWG\Put(
+     * @OA\Put(
      *      path="/food/{id}",
      *      summary="Update the specified Food in storage",
      *      tags={"Food"},
      *      description="Update Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="body",
      *          in="body",
      *          description="Food that should be updated",
      *          required=false,
-     *          @SWG\Schema(ref="#/definitions/Food")
+     *          @OA\Schema(ref="#/definitions/Food")
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  ref="#/definitions/Food"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )
@@ -232,33 +235,33 @@ class FoodAPIController extends AppBaseController
      * @param int $id
      * @return Response
      *
-     * @SWG\Delete(
+     * @OA\Delete(
      *      path="/food/{id}",
      *      summary="Remove the specified Food from storage",
      *      tags={"Food"},
      *      description="Delete Food",
      *      produces={"application/json"},
-     *      @SWG\Parameter(
+     *      @OA\Parameter(
      *          name="id",
      *          description="id of Food",
      *          type="integer",
      *          required=true,
      *          in="path"
      *      ),
-     *      @SWG\Response(
+     *      @OA\Response(
      *          response=200,
      *          description="successful operation",
-     *          @SWG\Schema(
+     *          @OA\Schema(
      *              type="object",
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="success",
      *                  type="boolean"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="data",
      *                  type="string"
      *              ),
-     *              @SWG\Property(
+     *              @OA\Property(
      *                  property="message",
      *                  type="string"
      *              )

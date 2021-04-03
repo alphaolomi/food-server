@@ -7,59 +7,59 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * @SWG\Definition(
+ * @OA\Definition(
  *      definition="Food",
  *      required={"name", "is_active", "is_available"},
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="id",
  *          description="id",
  *          type="integer",
  *          format="int32"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="name",
  *          description="name",
  *          type="string"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="sub_name",
  *          description="sub_name",
  *          type="string"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="is_active",
  *          description="is_active",
  *          type="boolean"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="is_available",
  *          description="is_available",
  *          type="boolean"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="description",
  *          description="description",
  *          type="string"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="price",
  *          description="price",
  *          type="number",
  *          format="number"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="created_at",
  *          description="created_at",
  *          type="string",
  *          format="date-time"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="updated_at",
  *          description="updated_at",
  *          type="string",
  *          format="date-time"
  *      ),
- *      @SWG\Property(
+ *      @OA\Property(
  *          property="deleted_at",
  *          description="deleted_at",
  *          type="string",
