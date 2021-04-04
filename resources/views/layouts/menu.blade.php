@@ -11,8 +11,8 @@
 
 {{-- <li class="menu-header">Starter</li> --}}
 
-<li class="side-menus {{ Request::is('leases*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('leases.index') }}"><i class="fas fa-cog"></i><span>Settings</span></a>
+<li class="side-menus {{ Request::is('settings*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ url('settings') }}"><i class="fas fa-cog"></i><span>Settings</span></a>
 </li>
 @hasanyrole( 'super-admin' )
 {{-- settings here --}}

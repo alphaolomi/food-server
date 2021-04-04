@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Create Food 
+    Create Food
 @endsection
 @section('content')
     <section class="section">
@@ -30,3 +30,4 @@
         </div>
     </section>
 @endsection
+
