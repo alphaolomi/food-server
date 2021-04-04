@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Edit Food 
+    Edit Food
 @endsection
 @section('content')
     <section class="section">
@@ -31,3 +31,9 @@
    </div>
   </section>
 @endsection
+
+
+
+@push('scripts')
+{!! JsValidator::formRequest('App\Http\Requests\UpdateFoodRequest') !!}
+@endpush

@@ -31,3 +31,7 @@
     </section>
 @endsection
 
+
+@push('scripts')
+{!! JsValidator::formRequest('App\Http\Requests\CreateFoodRequest') !!}
+@endpush
