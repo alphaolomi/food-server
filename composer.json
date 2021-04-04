@@ -39,10 +39,12 @@
         "spatie/laravel-permission": "^4.0",
         "spatie/laravel-searchable": "^1.9",
         "tucker-eric/eloquentfilter": "^2.4",
+        "unicodeveloper/laravel-password": "^1.0",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
+        "brianium/paratest": "^6.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

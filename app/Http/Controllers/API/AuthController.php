@@ -1,20 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
+use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 
-class AuthController extends Controller
+class AuthController extends AppBaseController
 {
     public function register(Request $request) {
-        $fields = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed'
-        ]);
+        $fields = $request->validated();
 
         $user = User::create([
             'name' => $fields['name'],
@@ -32,11 +30,8 @@ class AuthController extends Controller
         return response($response, 201);
     }
 
-    public function login(Request $request) {
-        $fields = $request->validate([
-            'email' => 'required|string',
-            'password' => 'required|string'
-        ]);
+    public function login(LoginRequest $request) {
+        $fields = $request->validated();
 
         // Check email
         $user = User::where('email', $fields['email'])->first();
@@ -58,7 +53,7 @@ class AuthController extends Controller
         return response($response, 201);
     }
 
-    public function logout(Request $request) {
+    public function logout() {
         auth()->user()->tokens()->delete();
 
         return [
