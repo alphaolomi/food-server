@@ -18,7 +18,7 @@ class FoodDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'food.datatables_actions');
+        return $dataTable->addIndexColumn()->addColumn('action', 'food.datatables_actions');
     }
 
     /**
@@ -40,8 +40,11 @@ class FoodDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-            ->columns($this->getColumns())
-            ->minifiedAjax()
+        ->columns($this->getColumns())
+        ->minifiedAjax()
+        // ->addIndex([],true)
+            ->addCheckbox([],true)
+
             ->addAction(['width' => '120px', 'printable' => false])
             ->parameters([
                 'dom'       => 'Bflrtip',
