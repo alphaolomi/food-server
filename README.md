@@ -19,6 +19,9 @@ An elegant backend server for simple food delivery application built with Larave
 
 ### 🏠 Homepage [food-engine.herokuapp.com](https://food-engine.herokuapp.com/)
 
+### 📄 [Documentation](./docs/README.md)
+
+
 <br>
 
 ## Technologies and Features Used
@@ -27,6 +30,16 @@ An elegant backend server for simple food delivery application built with Larave
 -   JWT Auth via [Laravel Sanctum](https://laravel.com/docs/master/sanctum)
 -   REST API
 -   [API Docs with OpenAPI](https://food-engine.herokuapp.com/api/documentation)
+
+<br>
+
+##  Modules involved
+
+- Landing Website
+- Front Menu + Ordering Website
+- Web Dashboard
+- REST API 
+- OpenAPI Docs 
 
 <br>
 
