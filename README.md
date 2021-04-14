@@ -9,7 +9,7 @@
 [![Twitter: alphaolomi](https://img.shields.io/twitter/follow/alphaolomi.svg?style=social)](https://twitter.com/alphaolomi)
 ![Maintained:yes][ico-maintained]
 [![PRs Welcome][ico-pr]][link-pr]
-
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falphaolomi%2Ffoodapp-backend&count_bg=%2379C83D&title_bg=%23555555&icon=codeigniter.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
 <br>
 An elegant backend server for simple food delivery application built with Laravel.
