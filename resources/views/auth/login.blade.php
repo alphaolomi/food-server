@@ -1,7 +1,7 @@
 @extends('layouts.auth_app')
-@section('title')
-    Admin Login
-@endsection
+
+@section('title','Login')
+
 @section('content')
     <div class="card card-primary">
         <div class="card-header"><h4>Login</h4></div>
@@ -53,13 +53,13 @@
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" name="remember" class="custom-control-input" tabindex="3"
                                id="remember"{{ (Cookie::get('remember') !== null) ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="remember">Remember Me</label>
+                        <label class="custom-control-label" for="remember">{{ __('Remember Me') }}</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                        Login
+                        {{ __('Login') }}
                     </button>
                 </div>
             </form>
