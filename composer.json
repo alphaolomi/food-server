@@ -16,7 +16,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.3",
         "infyomlabs/laravel-generator": "8.0.x-dev",
-        "infyomlabs/laravel-ui-stisla": "^3.0",
+
         "infyomlabs/stisla-templates": "^1.0",
         "infyomlabs/swagger-generator": "dev-master",
         "laracasts/flash": "^3.2",
