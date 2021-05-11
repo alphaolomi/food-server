@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6af75712dca6d7b38e1c5aac63eceb9",
+    "content-hash": "88710f98aeea8db5ef472c6c1106b81e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7577,27 +7577,28 @@
         },
         {
             "name": "spatie/laravel-activitylog",
-            "version": "3.17.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-activitylog.git",
-                "reference": "bdc44862aaca39ecbd824133b80dbd7c8017ed7f"
+                "reference": "f1e8e8ea2cb85945d5ac770e979b0381cc82da52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-activitylog/zipball/bdc44862aaca39ecbd824133b80dbd7c8017ed7f",
-                "reference": "bdc44862aaca39ecbd824133b80dbd7c8017ed7f",
+                "url": "https://api.github.com/repos/spatie/laravel-activitylog/zipball/f1e8e8ea2cb85945d5ac770e979b0381cc82da52",
+                "reference": "f1e8e8ea2cb85945d5ac770e979b0381cc82da52",
                 "shasum": ""
             },
             "require": {
-                "illuminate/config": "^6.0 || ^7.0 || ^8.0",
-                "illuminate/database": "^6.0 || ^7.0 || ^8.0",
-                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
-                "php": "^7.3 || ^8.0"
+                "illuminate/config": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.6.3"
             },
             "require-dev": {
                 "ext-json": "*",
-                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+                "orchestra/testbench": "^6.0",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
@@ -7651,7 +7652,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-activitylog/issues",
-                "source": "https://github.com/spatie/laravel-activitylog/tree/3.17.0"
+                "source": "https://github.com/spatie/laravel-activitylog/tree/4.0.0"
             },
             "funding": [
                 {
@@ -7663,7 +7664,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-02T16:49:06+00:00"
+            "time": "2021-05-04T12:36:15+00:00"
         },
         {
             "name": "spatie/laravel-backup",
@@ -7866,16 +7867,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.6.3",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "97b53951e9623b3e38babf274c335913bf320a1a"
+                "reference": "a28108b61dac8a83de6c97f09a5a1e98f4d75522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/97b53951e9623b3e38babf274c335913bf320a1a",
-                "reference": "97b53951e9623b3e38babf274c335913bf320a1a",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/a28108b61dac8a83de6c97f09a5a1e98f4d75522",
+                "reference": "a28108b61dac8a83de6c97f09a5a1e98f4d75522",
                 "shasum": ""
             },
             "require": {
@@ -7914,7 +7915,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.6.3"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.7.0"
             },
             "funding": [
                 {
@@ -7922,7 +7923,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-27T06:17:34+00:00"
+            "time": "2021-05-06T21:49:32+00:00"
         },
         {
             "name": "spatie/laravel-permission",
