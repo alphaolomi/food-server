@@ -22,15 +22,15 @@ class FoodFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
-        'sub_name' => $this->faker->word,
-        'is_active' => $this->faker->word,
-        'is_available' => $this->faker->word,
-        'description' => $this->faker->text,
-        'price' => $this->faker->randomDigitNotNull,
-        'created_at' => $this->faker->date('Y-m-d H:i:s'),
-        'updated_at' => $this->faker->date('Y-m-d H:i:s'),
-        'deleted_at' => $this->faker->date('Y-m-d H:i:s')
+            'name' => $this->faker->word(),
+            'sub_name' => $this->faker->word(2),
+            'is_active' => 1,
+            'is_available' => 1,
+            'description' => $this->faker->text(200),
+            'price' => $this->faker->numberBetween(0,5000),
+            'created_at' => now() , //$this->faker->date('Y-m-d H:i:s'),
+            'updated_at' => null,
+            'deleted_at' => null,
         ];
     }
 }

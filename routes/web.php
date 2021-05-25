@@ -18,6 +18,10 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('food', App\Http\Controllers\FoodController::class);
 
+    Route::get('settings', function () {
+        return 'Settings page';
+    } )->name('settings');
+
     Route::group(['middleware' => ['role:customer']], function () {
         //
     });
