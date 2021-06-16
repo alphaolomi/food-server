@@ -52,13 +52,15 @@ class FoodAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $food = $this->foodRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+        // $food = $this->foodRepository->all(
+        //     $request->except(['skip', 'limit']),
+        //     $request->get('skip'),
+        //     $request->get('limit')
+        // );
+        $food = $this->foodRepository->paginate(10);
 
-        return $this->sendResponse(FoodResource::collection($food), 'Food retrieved successfully');
+        return $this->sendResponse($food, 'Food retrieved successfully');
+        // return $this->sendResponse(FoodResource::collection($food), 'Food retrieved successfully');
     }
 
     /**
