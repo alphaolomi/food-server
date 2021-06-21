@@ -32,7 +32,7 @@
         "maatwebsite/excel": "^3.1",
         "mcamara/laravel-localization": "^1.6",
         "proengsoft/laravel-jsvalidation": "^4.4",
-        "realrashid/sweet-alert": "^3.2",
+        "realrashid/sweet-alert": "^4.0",
         "sentry/sentry-laravel": "^2.4",
         "spatie/laravel-activitylog": "^4.0",
         "spatie/laravel-backup": "^7.0",

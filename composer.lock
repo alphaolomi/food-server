@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed0cc9378009a2042e2f745cad36f0ab",
+    "content-hash": "e71c262d5a6e1211fd392fa8a776e3e7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6990,20 +6990,20 @@
         },
         {
             "name": "realrashid/sweet-alert",
-            "version": "v3.2.2",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realrashid/sweet-alert.git",
-                "reference": "2441267a295833480b2c8e55532f4190d1004d47"
+                "reference": "4923bb91d7144c2ac5dacda0b5e1472fff3d88af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/2441267a295833480b2c8e55532f4190d1004d47",
-                "reference": "2441267a295833480b2c8e55532f4190d1004d47",
+                "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/4923bb91d7144c2ac5dacda0b5e1472fff3d88af",
+                "reference": "4923bb91d7144c2ac5dacda0b5e1472fff3d88af",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^5.4|^7.0|^8.0",
+                "laravel/framework": "^7.0|^8.0",
                 "php": "^7.2|^8.0"
             },
             "require-dev": {
@@ -7076,7 +7076,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-17T18:21:20+00:00"
+            "time": "2021-06-14T19:01:35+00:00"
         },
         {
             "name": "ringcentral/psr7",
@@ -15042,5 +15042,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
