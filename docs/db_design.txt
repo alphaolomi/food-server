@@ -1,0 +1,64 @@
+#foods
+id
+name
+price
+rating
+description
+created_at
+updated_at
+
+
+Customers
+#customers
+id
+fname
+lname
+email
+phone*
+password
+created_at
+updated_at
+
+Restaurants
+#restaurants
+id
+name
+rating
+description
+created_at
+updated_at
+
+
+#orders
+id
+customer_id
+amount
+location
+status
+
+#food_orders
+order_id
+food_id
+
+
+
+
+Roles
+admin
+restrount
+customer
+
+
+
+
+SELECT SUM(amount) FROM orders WHERE status = 'PAID';
+
+
+SELECT AVG(amount) FROM orders WHERE status = 'PAID';
+
+
+admin => join foods with restount
+restorunt => join foods with order
+customer => foods order with order info
+
+
