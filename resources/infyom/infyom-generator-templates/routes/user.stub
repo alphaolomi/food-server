@@ -1,1 +1,0 @@
-Route::resource('users', 'UserController')->middleware('auth');
