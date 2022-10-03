@@ -5,22 +5,21 @@
     "keywords": [],
     "license": "BSD 3-Clause License",
     "require": {
-        "php": "^7.3|^8.0",
-        "barryvdh/laravel-dompdf": "^0.9.0",
-        "beyondcode/laravel-websockets": "^1.11",
-        "binarytorch/larecipe": "^2.4",
+        "php": "^8.0",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "beyondcode/laravel-websockets": "^2.0.0-beta.37",
+        "binarytorch/larecipe": "^2.5",
         "binarytorch/larecipe-feedback": "^1.0",
-        "darkaonline/l5-swagger": "^8.0",
+        "darkaonline/l5-swagger": "^8.4",
         "doctrine/dbal": "^3.0",
         "fideloper/proxy": "^4.4",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.3",
-        "infyomlabs/laravel-generator": "8.0.x-dev",
-
-        "infyomlabs/stisla-templates": "^1.0",
-        "infyomlabs/swagger-generator": "dev-master",
+        "fruitcake/laravel-cors": "^3.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "infyomlabs/laravel-generator": "^5.4",
+        "infyomlabs/stisla-templates": "^4.0",
+        "infyomlabs/swagger-generator": "^3.1",
         "laracasts/flash": "^3.2",
-        "laravel/framework": "^8.35",
+        "laravel/framework": "^9.33",
         "laravel/horizon": "^5.7",
         "laravel/sanctum": "^2.9",
         "laravel/socialite": "^5.2",
@@ -32,7 +31,7 @@
         "maatwebsite/excel": "^3.1",
         "mcamara/laravel-localization": "^1.6",
         "proengsoft/laravel-jsvalidation": "^4.4",
-        "realrashid/sweet-alert": "^4.0",
+        "realrashid/sweet-alert": "^5.1",
         "sentry/sentry-laravel": "^2.4",
         "spatie/laravel-activitylog": "^4.0",
         "spatie/laravel-backup": "^8.0",
@@ -45,15 +44,12 @@
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
-        "brianium/paratest": "^6.2",
-        "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^6.0",
         "pestphp/pest": "^1.0",
         "pestphp/pest-plugin-laravel": "^1.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
@@ -87,7 +83,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
