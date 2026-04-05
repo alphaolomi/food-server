@@ -1,138 +1,58 @@
-<p align="center"><img src="public/img/cover.png"></p>
-<br>
-<h1 align="center">Food App Backend👋</h1>
-<br>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-[![Build Status][ico-travis]]([link-travis])
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://food-engine.herokuapp.com/api/documentation)
-[![License: BSD 3--Clause](https://img.shields.io/badge/License-BSD_3--Clause-yellow.svg)](#)
-[![Twitter: alphaolomi](https://img.shields.io/twitter/follow/alphaolomi.svg?style=social)](https://twitter.com/alphaolomi)
-![Maintained:yes][ico-maintained]
-[![PRs Welcome][ico-pr]][link-pr]
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falphaolomi%2Ffoodapp-backend&count_bg=%2379C83D&title_bg=%23555555&icon=codeigniter.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-<br>
-An elegant backend server for simple food delivery application built with Laravel.
+## About Laravel
 
-<br>
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-### 🏠 Homepage [food-engine.herokuapp.com](https://food-engine.herokuapp.com/)
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### 📄 [Documentation](./docs/README.md)
+## Learning Laravel
 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-<br>
+In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Technologies and Features Used
+You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
 
--   Laravel 8.0
--   JWT Auth via [Laravel Sanctum](https://laravel.com/docs/master/sanctum)
--   REST API
--   [API Docs with OpenAPI](https://food-engine.herokuapp.com/api/documentation)
+## Agentic Development
 
-<br>
-
-##  Modules involved
-
-- Landing Website
-- Front Menu + Ordering Website
-- Web Dashboard
-- REST API 
-- OpenAPI Docs 
-
-<br>
-
-## 🚀 Development
-
-Composer and Yarn/NPM package manager are required
-
-Via Git
-
--   Fork, then Clone
+Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
 
 ```bash
-git clone https://github.com/alphaolomi/foodapp-server.git
+composer require laravel/boost --dev
 
-cd foodapp-server
-
-composer install --no-interaction
-yarn install
+php artisan boost:install
 ```
 
--   Edit `.env` and set your database connection details
+Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
-```bash
-cp .env.example .env
-```
+## Contributing
 
--   Genrate keys and migrate tables
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-```bash
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-```
+## Code of Conduct
 
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-<br>
+## Security Vulnerabilities
 
-## Run tests
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-```sh
-composer test
-```
+## License
 
-
-<br>
-
-## ✍ Author
-
--   👤 **Alpha Olomi** -   Twitter: [@alphaolomi](https://twitter.com/alphaolomi) -   Github: [@alphaolomi](https://github.com/alphaolomi)
-
-
-<br />
-
-## 🤝 Contributing
-
-Pull requests are most welcome, Contributions, issues and feature requests are welcome too!
-
-Feel free to check [issues page](https://github.com/alphaolomi/food-app/issues). You can also take a look at the [contributing guide](https://github.com/alphaolomi/food-app/issues).
-
-
-<br />
-
-## 🔒 Security
-
-If you discover any security related issues, please email [alphaolomi@gmail.com](mailto:alphaolomi@gmail.com) instead of using the issue tracker.
-
-<br />
-
-
-## 📄 License
-
-BSD 3-Clause License. Please see [License File](LICENSE.md) for more information.
-
-<br />
-
-## Show your support
-
-Give a ⭐️ if this project helped you! <img alt="GitHub stars" src="https://img.shields.io/github/stars/alphaolomi/food-server?logo=github&logoColor=github&style=for-the-badge">
-
-<a href="https://www.linkedin.com/in/alphaolomi/">
-    <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
-
----
-
-<br />
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
-[ico-license]: https://img.shields.io/badge/license-BSD_3_Clause-green.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/com/alphaolomi/food-server?style=flat-square
-[link-travis]: https://travis-ci.com/alphaolomi/food-server
-[link-repo]: https://github.com/alphaolomi/food-server
-[link-contributors]: ../../contributors
-[ico-maintained]: https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square
-[link-pr]: http://makeapullrequest.com
-[ico-pr]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

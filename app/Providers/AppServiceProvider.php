@@ -2,35 +2,31 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\URL;
+use Dedoc\Scramble\Scramble;
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        // mysql bug
-        // https://laravel-news.com/laravel-5-4-key-too-long-error
-        Schema::defaultStringLength(191);
+        Vite::prefetch(concurrency: 3);
 
-        if (config('app.env') === 'production') {
-            URL::forceScheme('https');
-        }
+        Gate::define('viewApiDocs', fn (): bool => app()->environment('local'));
+
+        Scramble::routes(fn (Route $route): bool => str_contains($route->uri(), 'v1'));
     }
 }
