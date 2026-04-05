@@ -52,7 +52,8 @@ test('user cannot fetch another users order', function () {
 
     $this->getJson("/api/v1/orders/{$orderId}")
         ->assertForbidden()
-        ->assertJsonPath('message', 'Forbidden.');
+        ->assertJsonPath('message', 'Forbidden.')
+        ->assertJsonPath('code', 'forbidden');
 });
 
 test('order show requires authentication', function () {

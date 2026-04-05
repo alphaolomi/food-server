@@ -13,7 +13,10 @@ class OrderBoardController extends Controller
 {
     public function __invoke(Request $request): Response
     {
+        $user = $request->user();
+
         $orders = Order::query()
+            ->whereHas('store.organization.users', fn ($q) => $q->where('users.id', $user->id))
             ->with(['store', 'lines.catalogItem', 'tickets'])
             ->latest()
             ->limit(100)

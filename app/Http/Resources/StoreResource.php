@@ -19,6 +19,11 @@ class StoreResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'timezone' => $this->timezone,
+            'organization' => $this->whenLoaded('organization', fn () => [
+                'id' => $this->organization->id,
+                'name' => $this->organization->name,
+                'slug' => $this->organization->slug,
+            ]),
         ];
     }
 }

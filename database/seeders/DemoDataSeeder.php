@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Enums\OrganizationRole;
 use App\Models\CatalogItem;
 use App\Models\Category;
 use App\Models\Organization;
 use App\Models\Store;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DemoDataSeeder extends Seeder
@@ -55,6 +57,13 @@ class DemoDataSeeder extends Seeder
                     'is_available' => true,
                 ],
             );
+        }
+
+        $user = User::query()->where('email', 'test@example.com')->first();
+        if ($user) {
+            $org->users()->syncWithoutDetaching([
+                $user->id => ['role' => OrganizationRole::Owner->value],
+            ]);
         }
     }
 }

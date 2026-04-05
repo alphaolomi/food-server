@@ -20,5 +20,14 @@ test('catalog returns store and categories', function () {
 
 test('catalog returns 404 for unknown store', function () {
     $this->getJson('/api/v1/stores/unknown-store/catalog')
-        ->assertNotFound();
+        ->assertNotFound()
+        ->assertJsonPath('code', 'not_found');
+});
+
+test('stores directory is paginated', function () {
+    $this->seed(DemoDataSeeder::class);
+
+    $this->getJson('/api/v1/stores?per_page=5')
+        ->assertOk()
+        ->assertJsonStructure(['data', 'links', 'meta']);
 });
