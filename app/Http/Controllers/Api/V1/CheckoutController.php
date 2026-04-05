@@ -2,24 +2,31 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Domains\Integrations\WebhookDispatcher;
 use App\Domains\Payments\PaymentOrchestrator;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\V1\CheckoutRequest;
 use App\Http\Resources\OrderResource;
+use App\Http\Responses\ApiError;
 use App\Models\CatalogItem;
 use App\Models\Order;
 use App\Models\Store;
 use App\Models\Ticket;
+use Dedoc\Scramble\Attributes\Endpoint;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 
+#[Group('Checkout', 'Place orders and payments.', weight: 2)]
 class CheckoutController extends Controller
 {
     public function __construct(
-        private PaymentOrchestrator $payments
+        private PaymentOrchestrator $payments,
+        private WebhookDispatcher $webhooks,
     ) {}
 
+    #[Endpoint(operationId: 'checkout', title: 'Checkout', description: 'Supports Idempotency-Key header for safe retries.')]
     public function store(CheckoutRequest $request, string $storeSlug): JsonResponse
     {
         $store = Store::query()->where('slug', $storeSlug)->firstOrFail();
@@ -50,9 +57,11 @@ class CheckoutController extends Controller
             ->keyBy('id');
 
         if (count($itemIds) !== $items->count()) {
-            return response()->json([
-                'message' => 'One or more items are invalid, unavailable, or not sold at this store.',
-            ], Response::HTTP_UNPROCESSABLE_ENTITY);
+            return ApiError::json(
+                'One or more items are invalid, unavailable, or not sold at this store.',
+                'invalid_catalog_items',
+                Response::HTTP_UNPROCESSABLE_ENTITY,
+            );
         }
 
         $order = DB::transaction(function () use ($request, $store, $user, $linesInput, $items, $idempotencyKey) {
@@ -95,6 +104,18 @@ class CheckoutController extends Controller
 
             return $order->fresh();
         });
+
+        if ($order->status === 'confirmed') {
+            $this->webhooks->dispatch(
+                $store->organization,
+                'order.confirmed',
+                [
+                    'order_id' => $order->id,
+                    'store_slug' => $store->slug,
+                    'total_cents' => $order->total_cents,
+                ],
+            );
+        }
 
         return response()->json([
             'order' => new OrderResource($order->load(['lines.catalogItem', 'tickets', 'payments'])),

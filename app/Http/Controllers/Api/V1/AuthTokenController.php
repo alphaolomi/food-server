@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\V1\Auth\LoginRequest;
 use App\Http\Requests\Api\V1\Auth\RegisterRequest;
 use App\Models\User;
+use Dedoc\Scramble\Attributes\Endpoint;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
 
+#[Group('Auth', 'Sanctum bearer token authentication.', weight: 0)]
 class AuthTokenController extends Controller
 {
+    #[Endpoint(operationId: 'register', title: 'Register')]
     public function register(RegisterRequest $request): JsonResponse
     {
         $user = User::query()->create([
@@ -34,6 +38,7 @@ class AuthTokenController extends Controller
         ], Response::HTTP_CREATED);
     }
 
+    #[Endpoint(operationId: 'login', title: 'Login')]
     public function login(LoginRequest $request): JsonResponse
     {
         $user = User::query()->where('email', $request->validated('email'))->first();
@@ -55,6 +60,7 @@ class AuthTokenController extends Controller
         ]);
     }
 
+    #[Endpoint(operationId: 'logout', title: 'Logout')]
     public function logout(Request $request): JsonResponse
     {
         $request->user()?->currentAccessToken()?->delete();
